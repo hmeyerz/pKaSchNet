@@ -3,6 +3,7 @@ from itertools import chain
 import argparse
 import parmed
 
+
 leap_resis = (
     "ALA", "ARG", "ASN", "CYS",
     "GLN", "GLY", "HID", "HIE", "HIP", "HYP",
@@ -41,7 +42,7 @@ class AmberPDBFixer(object):
             elif name == 'HIS':
                 residue.name = 'HIP'
             elif name not in leap_resis:
-                residue.name = 'UNK'
+                residue.name = 'DUM'
             else:
                 pass
 
@@ -79,6 +80,7 @@ def run(
     base_filename, _ = os.path.splitext(arg_pdbout)
 
     pdbin = arg_pdbin
+    print(pdbin)
 
     parm = parmed.read_PDB(pdbin)
 
