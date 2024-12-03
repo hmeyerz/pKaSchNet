@@ -1,14 +1,15 @@
-
 import pdbfixer
 from openmm.app import PDBFile
 import sys
+
+path = '/home/pbuser/Desktop/Jessi/data_prep/PDB/'
 
 def fix_pdb(infile):
     """gets og residue mapping. then pdbfixes, which adds missing residues in accordance with the sequence, adds hydrogens at pH 7.
     and then removes alt conforms (conformB)"""
 
     mapy, resis = [],[]
-    infile = f"/Users/jessihoernschemeyer/pKaSchNet/PDB/{pdb}.ent"
+    infile = f"{path}pdb{pdb}.ent"
 
     def get_xmapping(infile):
         """original experimentally obtained residue and termini 
@@ -20,40 +21,44 @@ def fix_pdb(infile):
                 if line.startswith("ATOM" or "HETATM"):
                         if line[12:17].strip() == 'CA':
                             L = line.split()[2:-2] 
-                            resi = f"{L[3]}{L[2]}{L[1]}{L[4]}" #name, chain, resnum, xcoord
+                            resis.append(f"{L[3]}{L[2]}{L[1]}{L[4]}") #name, chain, resnum, xcoord
 
 
                 elif line.startswith('TER'):
                     L = line.split()
                     ters.append(f"{L[4]}{L[3]}{L[2]}")
     
-        with open(f"{infile}_resis.txt", "w") as f:
-            f.write(pdb)
+        with open(f"{path}maps/{pdb}_resis.txt", "w") as f:
+            f.write(f"{pdb}\n")
             f.write(' '.join(ters))
+            f.write("\n")
             f.write(' '.join(resis))
 
 
     get_xmapping(infile)
 
     fixer =pdbfixer.PDBFixer(infile)
+
     fixer.findNonstandardResidues()
     fixer.findMissingResidues()
     fixer.findMissingAtoms()
     fixer.replaceNonstandardResidues()
 
     missing_resis = fixer.missingResidues
-
     if missing_resis: #save unfixed file
-        PDBFile.writeFile(fixer.topology, fixer.positions, f"{infile}-unfix")
-        with open(f"{infile}_resis.txt", "a") as f:
+        PDBFile.writeFile(fixer.topology, fixer.positions, f"{path}altstructs/{pdb}-unfix.pdb")
+        with open(f"{path}maps/{pdb}_resis.txt", "a") as f:
+                f.write('\n')
                 f.write(str(missing_resis))
 
     fixer.addMissingAtoms()
+    PDBFile.writeFile(fixer.topology, fixer.positions, f"{path}altstructs/{pdb}-noH.pdb")
+
     fixer.addMissingHydrogens(pH=7.0)
-    PDBFile.writeFile(fixer.topology, fixer.positions, f"{infile}-fix")
+    PDBFile.writeFile(fixer.topology, fixer.positions, f"{path}{pdb}-fixed.pdb")
 
     def get_ymapping1_removealts(infile):
-        """fixes pdbfixer. gets second side of map"""
+        """not in use rn"""
         ters=[]
         infile = f"{infile}-fix"
         print(infile, type(infile))
@@ -85,8 +90,6 @@ def fix_pdb(infile):
             with open(f"{infile}_resis.txt", "a") as f:
                 f.write(' '.join(set(mapy)))
 
-        
-    get_ymapping1_removealts(infile)
 
 pdb=sys.argv[1]
-fix_pdb(f"/Users/jessihoernschemeyer/pKaSchNet/PDB/{pdb}.ent")
+fix_pdb(f"{path}{pdb}.ent")
