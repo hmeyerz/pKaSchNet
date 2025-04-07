@@ -1,0 +1,44 @@
+badstructs=
+
+paths = paths.difference(badpaths)
+
+for path in paths:
+	with gzip.open("/structures/ids/{path}","r") as f:
+		slines
+
+	with gzip.open("/targets/ids/{path}","r") as f:
+		tlines
+
+	for line in slines:
+		info=np.char.partition(line," ")
+		count= np.char.rpartition(info," ")
+
+	for line in tlines:
+		info = np.char.partition(line," ")
+		id, target=info[0],info[2]
+
+	sorted(slines)
+	sorted(tlines) # by chain too
+
+	for t, s in zip(slines,tlines):
+		align #sort a, sortb
+
+
+paths=/structures/coors/
+for path in paths:
+#
+	with gzip.open("/structures/ids/{path}","r") as f:
+		slines
+
+paths=/structures/species/
+for path in paths:
+#
+	with gzip.open("/structures/ids/{path}","r") as f:
+		slines
+
+#generate cuts, save as tensors
+
+
+
+
+	
