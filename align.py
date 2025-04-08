@@ -80,8 +80,9 @@ def align():
             labels=[]
             j_0=0
             ids=[]
+            idcount=0
             counter,counter2=0,1
-            for pk in pypkaresis:
+            for i,pk in enumerate(pypkaresis):
                 my=myresis[0]
                 py=pk
                 #print("origin!",my,py)
@@ -96,6 +97,7 @@ def align():
 
                         labels.append(np.float32(pkas[id.item()]))
                         ids.append(id)
+                        #idcount +=1
                         del myresis[0]
                     
                     elif my - counter > py:
@@ -124,12 +126,12 @@ def align():
                             #ids.append(my)
                             #labels[n] = pks[str(py) + chr(64+counter2)]
                             del myresis[0]
-                        else:
+                            
+                        else: #myresis fail
                             #print(my,py)
+                            del mmyresis[i]
                             del myresis[0]
-
-
-                        continue
+                            continue
 
                 else: #chain break in my data
                     counter2+=1
@@ -144,6 +146,7 @@ def align():
 
             torch.save(torch.tensor(labels), f"./labels/{pdb}")
             #print(pypka)
+            
         except:
             print(pdb, "fail")
             
