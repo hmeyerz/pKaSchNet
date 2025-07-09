@@ -3,11 +3,11 @@ import gzip
 import glob
 import edlib
 import os
-from init import constants
+from utils import constants
 
 
 data_dir = os.getcwd()
-nbrs, constants = constants(data_dir=data_dir,n_neighbors=50)
+nbrs, constants = constants(data_dir=data_dir,n_neighbors=500)
 fullcode = constants["titratables_full"]
 code = constants["titratables_short"]
 three_to_one = constants["aa_code"]
@@ -23,11 +23,13 @@ class parser():
     def __init__(self, gzipped_pdb, ref_pdb):
         self.path    = gzipped_pdb
         self.pdb     = gzipped_pdb[-7:-3]
-        self.targets = np.load(data_dir + "/targets/{self.pdb}.npz")
-        self.save_dir = data_dir + "/ßinputs/"
+        self.targets = np.load(f"../targets/{self.pdb}.npz")
+        self.save_dir = "../pkegnn_inputs/"
         self.ligands = ligands
         self.ref_pdb = ref_pdb
         self.nbrs    = nbrs
+        print(self.pdb)
+        #self.num_nbrs
         
     def residue_map(self):
             # helper: extract per-chain sequences & idx-lists into parallel lists
@@ -76,14 +78,14 @@ class parser():
                 nidx = cur_idxs[c]
                 oidx = ref_idxs[c]
 
-
                 # 1) compute the alignment path
                 res = edlib.align(oseq, nseq, mode="NW", task="path")
                 # skip if no CIGAR produced
                 if not res.get("cigar"):
                     # you could log a warning here if you like:
                     print(f"Warning: no alignment path for chain {c}, skipping")
-                    continue
+                    self.mapping=None
+                    return
 
                 nice = edlib.getNiceAlignment(res, oseq, nseq)
                 ref_aln, qry_aln = nice["target_aligned"], nice["query_aligned"]
@@ -102,7 +104,7 @@ class parser():
             self.mapping = mapping
 
     def parse_titratable_lines(self, lines):
-        """get info from asp,glu,his,cys,tyr. removes hydrogens."""
+        """get info from asp,glu,his,cys,tyr. removes hydrogens. keeps insertions now cuz have aligner"""
             
         amber_set = amber.values()      # byte-strings of titratable names
         self.species,self.coors, self.sites, self.ids  = [],[],[],[]
@@ -113,10 +115,11 @@ class parser():
         for line in lines:
             if line.lstrip().startswith(b"H"): continue
             # skip insertions 
-            resnum = line[10:15].strip()
-            if not resnum.isdigit():
-                self.others.append(line)
-                continue
+            resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+            #if not resnum.isdigit():
+                #print("insert")
+                #self..append(line)
+                #continue
 
             # new residue?  flush the previous group
             if resnum != last_resnum and cur_species:
@@ -124,7 +127,7 @@ class parser():
                 self.coors.append(cur_coords)
                 cur_species, cur_coords = [], []
                 
-            cur_species.append(elements[line[-8:].strip()[0:1]])
+            cur_species.append(elements[line[-9:].split()[0][0:]])
             cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
 
             if line[:5].strip() in amber_set:
@@ -143,7 +146,7 @@ class parser():
             flag=True
         if others_s: self.others.append((np.concatenate(others_s),np.vstack(others_c)))
 
-        self.species,self.coors=np.array(self.species),np.array(self.coors)
+        self.species,self.coors=np.array(self.species,dtype=object),np.array(self.coors,dtype=object)
         
     
     def aggregate_others(self):
@@ -172,8 +175,11 @@ class parser():
         for line in lines:
             # skip hydrogens
             if not line[0:2].strip().startswith(b"H"):
-                species.append(elements[line[-8:].strip()[0:1]])
-                coors.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
+                try:
+                    species.append(elements[line[-9:].split()[0][0:]])
+                    coors.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
+                except Exception as e:
+                    print(line)
         self.others.append((species, coors))
 
     def parse_pdb(self):
@@ -201,6 +207,7 @@ class parser():
     def hoods(self,coors,species,sitecoors):
         others=self.aggregate_others()
         coors = np.concatenate([*coors, np.vstack(others[1])], axis=0)
+        #print(np.vstack(coors),sitecoors)
         nbrs = self.nbrs.fit(np.vstack(coors)).kneighbors(sitecoors,500, return_distance=False)
         species=np.concatenate([*[*species, others[0]]]) 
         self.species,self.coors=[species[n_ixs] for n_ixs in nbrs], [coors[n_ixs] for n_ixs in nbrs]
@@ -225,8 +232,11 @@ class parser():
         self.others=[]
         sitecoors=[]
         
+        
         #get structures of titratable residues
         self.residue_map()
+        if not self.mapping:
+            return
         self.parse_pdb()
 
         
@@ -258,6 +268,7 @@ class parser():
         self.ids, pidx, midx = np.intersect1d(pkpdb["ids"], self.ids,return_indices=True)
         mask[midx] = False
         if mask.any():
+            #print("mask", mask, len(self.species),len(self.coors),len(self.ids),len(pkpdb),len(pidx),len(midx))
             self.others.append((np.concatenate(self.species[mask]), np.vstack(self.coors[mask])))
 
         self.hoods(self.coors[midx],self.species[midx],self.sitecoors[midx])
