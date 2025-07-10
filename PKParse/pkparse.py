@@ -32,6 +32,19 @@ class parser():
         #self.num_nbrs
         
     def residue_map(self):
+            """This function uses the RCSB reference pdb as the reference sequence
+            for sequence alignment through edlib. This allows for the incoming residue 
+            numbers to be arbitrary and allows for custom PDDs and to be fixed by modeling
+            software (does not support files with non-standardized naming conventions, where
+            standard is considered to be Amber, even if that isn't correct.)
+            
+            The output is matched pairwise such that insertions and deletions trigger 
+            the increasse of their respective counter, which gets their keys made by
+            residue number, chain, and residue name. 
+
+            These make the mapping which are the only IDs which get through to be matched with 
+            the pkPDB targets.
+            """
             # helper: extract per-chain sequences & idx-lists into parallel lists
             def extract(path):
                 seqs,seq,idxs,keys = [],[],[],[]   # list of lists of idx‐bytes
@@ -111,6 +124,7 @@ class parser():
         last_resnum                                   = None
         cur_species, cur_coords     =[],[]
         flag=False
+        cur_species, cur_coords, others_c,others_s      =[],[],[],[]
 
         # 1) Single-pass parse & group by residue
         for line in lines:
@@ -125,6 +139,9 @@ class parser():
                 if flag: #long term memory
                     self.species.append(cur_species)
                     self.coors.append(cur_coords)
+                else: #send to others
+                    others_s.append(cur_species)
+                    others_c.append((cur_coords))
                 cur_species, cur_coords = [], []
                 flag=False
             
@@ -139,6 +156,12 @@ class parser():
         if flag: #long term memory
             self.species.append(cur_species)
             self.coors.append(cur_coords)
+        else:
+            others_s.append(cur_species)
+            others_c.append((cur_coords))
+
+        if others_s: self.others.append((np.concatenate(others_s),np.vstack(others_c)))
+
         self.species,self.coors=np.array(self.species,dtype=object),np.array(self.coors,dtype=object)
         
     
