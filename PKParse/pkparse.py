@@ -6,8 +6,8 @@ import os
 from utils import constants
 
 
-data_dir = os.getcwd()
-nbrs, constants = constants(data_dir=data_dir,n_neighbors=5)
+#data_dir = os.getcwd()
+constants = constants()
 fullcode = constants["titratables_full"]
 code = constants["titratables_short"]
 three_to_one = constants["aa_code"]
@@ -23,13 +23,10 @@ class parser():
     def __init__(self, gzipped_pdb, ref_pdb):
         self.path    = gzipped_pdb
         self.pdb     = gzipped_pdb[-7:-3]
-        self.targets = np.load(f"../../targets/{self.pdb}.npz")
+        self.targets = np.load(f"../../data/targets/{self.pdb}.npz")
         self.save_dir = "../inputs/"
         self.ligands = ligands
         self.ref_pdb = ref_pdb
-        #self.nbrs    = nbrs
-        #print(self.pdb)
-        #self.num_nbrs
         
     def residue_map(self):
             """This function uses the RCSB reference pdb as the reference sequence
@@ -38,12 +35,22 @@ class parser():
             software (does not support files with non-standardized naming conventions, where
             standard is considered to be Amber, even if that isn't correct.)
             
-            The output is matched pairwise such that insertions and deletions trigger 
-            the increasse of their respective counter, which gets their keys made by
-            residue number, chain, and residue name. 
 
-            These make the mapping which are the only IDs which get through to be matched with 
-            the pkPDB targets.
+            three_to_one is a dict takes as input key the residue name, which if it is standard as it should be, converts it to its one letter nickname e.g. GLU --> E. 
+            If it is not recognized, e.g. a typesetter error in original PDB making GLX for GLU, the nickname will be "X". Currently, these will still be paired as
+            two X's rather than excluded on the basis of being an X. However, if this code is used as intended with a PDBFixed PDB or analogous (find nonstandard residue
+            names and replace with standard names built in), this should ideally not occur where two Xs are paired. In any case, it will not affect our results if two
+            Xs are paired, because the Xs will not ever be our five titratable residues which needed the standard names "HIS/ASP/etc." to be parsed. The fact that 
+            every residue is used in this function is only because this is needed for full integrity alignment. 
+
+            The output is matched pairwise such that insertions and deletions trigger 
+            the increase of their respective counter, which retrieves their keys made by
+            residue number, chain, and residue name e.g. 12A0 = residue 12, chain A, HIS 
+            (where HIS = 0 is an internal dictionary code defined in utils.py.
+
+            These matched residues form the mapping which are the only IDs which get through
+            the parser to be matched with the pkPDB targets.
+
             """
             # helper: extract per-chain sequences & idx-lists into parallel lists
             def extract(path):
@@ -66,7 +73,7 @@ class parser():
                             continue
 
                         keys.append(key)
-                        aa1 = three_to_one.get(resi, "X")
+                        aa1 = three_to_one.get(resi, "X") 
                         seq.append(aa1)
                         lastkey=key
                         
@@ -117,51 +124,66 @@ class parser():
             self.mapping = mapping
 
     def parse_titratable_lines(self, lines):
-        """get info from asp,glu,his,cys,tyr. removes hydrogens. keeps insertions now cuz have aligner"""
+        """get info from asp,glu,his,cys,tyr. removes hydrogens. 
+        
+        It strips residue numbers of their insertions, which have been fixed by a mender which never has two residue numbers the same. The chance of 
+        failure is probably small but still real if this is used not as intended e.g. PARSING A PDB WHICH HAS INSERTION CODES THAT DONT BY
+        A GOOD CHANCE HAVE A UNIQUE RES NUMBER EXCLUDING INSERTION CODE (A LETTER) FOR EACH RESIDUE IN A CHAIN.
+
+        
+        If there is a titratable heavy atom that is the hydrogen pair doner defined by Amber and thus in amber_set, then the residue-wise information is 
+        retained in the long term memory. If the parser never encountered a titratable site (e.g. parsing a raw rcsb pdb with unresolved Lysine side chain
+        and thus a missing NZ atom), then the residue information will instead be sent to "others", which is the atoms from non-titratable including
+        ligands, residues, and non-labeled titratable residues."""
             
         amber_set = amber.values()      # byte-strings of titratable names
         self.species,self.coors, self.sites  = [],[],[]
         last_resnum                                   = None
         cur_species, cur_coords     =[],[]
-        flag=False
+        amber_flag=False
         cur_species, cur_coords, others_c,others_s      =[],[],[],[]
 
         # 1) Single-pass parse & group by residue
         for line in lines:
             
+            #skip hydrogens
             if line.lstrip().startswith(b"H"): continue
-            # skip insertions 
+            #strip insertions 
             resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
         
 
-            # new residue?  flush the previous group
+            # new residue?  put previous residue in long term memory of potential sites (self.species), or other resis (self.others) depending on flag status
             if resnum != last_resnum and cur_species:
-                if flag: #long term memory
+                if amber_flag: 
                     self.species.append(cur_species)
                     self.coors.append(cur_coords)
-                else: #send to others
+                else: 
                     others_s.append(cur_species)
                     others_c.append((cur_coords))
                 cur_species, cur_coords = [], []
-                flag=False
+                amber_flag=False
             
+            #per-residue short term memory accumulates Z + pos info
             cur_species.append(elements[line[-9:].split()[0][0:]])
             cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
 
+            #only retain resis with resolved/modeled titratable sites. these lines generate the IDs to be paired with pkPDB targets downstream
             if line[:5].strip() in amber_set:
-                flag=True
+                amber_flag=True
                 self.sites.append(line)
 
             last_resnum = resnum
-        if flag: #long term memory
+        
+        #final long term memory capture
+        if amber_flag: 
             self.species.append(cur_species)
             self.coors.append(cur_coords)
-        else:
+        else: 
             others_s.append(cur_species)
             others_c.append((cur_coords))
-
         if others_s: self.others.append((np.concatenate(others_s),np.vstack(others_c)))
 
+        #save as arrays for downstream mask operations
         self.species,self.coors=np.array(self.species,dtype=object),np.array(self.coors,dtype=object)
         
     
@@ -186,28 +208,38 @@ class parser():
 
     
     def parse_others(self, lines):
-        """parse all other non-ligand ATOM lines"""
+        """parse all other non-ligand ATOM lines using entire periodic table"""
         species, coors = [], []
         for line in lines:
             # skip hydrogens
             if not line[0:2].strip().startswith(b"H"):
-                #try:
+                #here I use cofactors as my Z number dict --> entire periodic table
                 species.append(cof[line[-9:].split()[0][0:]])
                 coors.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
-                #except Exception as e:
-                #    print("atom not in dictionary",e,self.pdb)
+                
         self.others.append((species, coors))
 
     def parse_pdb(self):
         """to do try except re: encoding/gzipped
         #hi b'HG23 ILE A 492      65.222 102.163  26.506  1.00  0.00           H   std\n'
-        # #encode everything if user didnt gzip their filess? #TODO"""
+        # #encode everything if user didnt gzip their filess? #TODO
+        # TODO: here is where we can encode user input.
+
+        This code opens the gzipped pdb and line by line extracts ATOM and HETATM records.
+        
+        For atom records, if they are titratable, they are sent to parse_titratable_lines.
+        This uses a Z table dict which is only 6,7,8,16 (C,N,O,S).
+
+        Otherwise, they are sent to parse_others, which parses with the full periodic table.
+        Despite there is H in the cofactors dict, only lines which dont have Hydrogens 
+        (see parse_others) enter the dictionary."""
 
         with gzip.open(self.path, "rb") as f: #TODO?
             lines=f.readlines()
 
         titratables, others  = [], []
 
+        #get ligands
         for line in lines:
             if line.startswith(b"HETATM"):
                 if line[16:20].strip() in self.ligands or cof: others.append(line[12:])
@@ -218,14 +250,6 @@ class parser():
         self.parse_others(others)
         self.parse_titratable_lines(titratables)
         
-    
-
-    def hoods(self,coors,species):#,sitecoors):
-        others=self.aggregate_others()
-        coors = np.concatenate([*coors, np.vstack(others[1])], axis=0)
-        self.all_coors=np.vstack(coors)
-        self.all_species=np.concatenate([*[*species, others[0]]]) 
-
     def get_disulfides(self,lines):
         """in: titratable lines"""
         cys_lines = [(i,line) for i,line in enumerate(lines) if line[5:6] == b"C"]
@@ -240,22 +264,18 @@ class parser():
             self.disulfides=bridges
         else: self.disulfides=None
         
-
-    
     def run(self):
         self.others=[]
         sitecoors=[]
         ids,sites=[],[]
         
         
-        #get structures of titratable residues
+        #get species/pos info of titratable residues
         self.residue_map()
         if not self.mapping:
             return
         self.parse_pdb()
         
-        
-        #hereeeee is the craziness. #jesse
         for line in self.sites:
             id=line[10:18].strip() + line[9:10] + code[line[5:6]] #get ids frrom sites
             id=self.mapping.get(id) #from map

@@ -1,8 +1,5 @@
 from utils import constants, load_train_dir
 from pkparse import parser
-#from utils import pack_npz_single#pack_npz_to_zlib
-#import random
-import glob
 
 import glob, os
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -22,16 +19,17 @@ OUT_ZIP = "../pkegnn_dataset.zip"
 import os, time
 to=time.time()
 
-DATA_DIR = os.getcwd()
-nbrs, constants = constants(data_dir=DATA_DIR,n_neighbors=500) #obsolete neighbors
+#DATA_DIR = os.getcwd()
+constants = constants() #obsolete neighbors
 oldpdbs, newpdbs = load_train_dir()
 #print(oldpdbs,newpdbs)
 if not os.path.exists("../inputs/"):
     os.mkdir("../inputs/")
 
 
-
+print(newpdbs[0],oldpdbs[0])
 def run(num_pdbs="all"):
+    """This takes the intersection of the fixed and original gzipped pdb files which are on disk and wraps them in a try-except clause."""
     t0 = time.time()
     if num_pdbs == "all":
         indices = range(len(oldpdbs))
@@ -41,14 +39,6 @@ def run(num_pdbs="all"):
     for i in range(indices):
         try:
             parser(newpdbs[i], oldpdbs[i]).run()
-
-                        # new: convert the freshly-written raw npz → bundle.npz
-            #raw = f"../inputs/{newpdbs[i][-7:-3]}.npz"
-            #if os.path.exists(raw):
-             #   pack_npz_single(raw)         # writes 1abc.bundle.npz next to raw
-                #os.remove(raw)               # optional: delete raw to save space
-
-
 
         except Exception as e:
             print(e)
