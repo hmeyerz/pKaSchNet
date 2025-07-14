@@ -34,7 +34,13 @@ class parser():
             numbers to be arbitrary and allows for custom PDDs and to be fixed by modeling
             software (does not support files with non-standardized naming conventions, where
             standard is considered to be Amber, even if that isn't correct.)
-            
+
+            **does not support files without:
+                 TER records 
+                 Chain records ("A", "X")
+                 gzipped
+
+            cur = modeled and parsed | ref = rcsb (assumed pkPDB numbering)
 
             three_to_one is a dict takes as input key the residue name, which if it is standard as it should be, converts it to its one letter nickname e.g. GLU --> E. 
             If it is not recognized, e.g. a typesetter error in original PDB making GLX for GLU, the nickname will be "X". Currently, these will still be paired as
@@ -46,10 +52,33 @@ class parser():
             The output is matched pairwise such that insertions and deletions trigger 
             the increase of their respective counter, which retrieves their keys made by
             residue number, chain, and residue name e.g. 12A0 = residue 12, chain A, HIS 
-            (where HIS = 0 is an internal dictionary code defined in utils.py.
+            (where HIS = 0 is an internal dictionary code defined in utils.py.)
 
             These matched residues form the mapping which are the only IDs which get through
             the parser to be matched with the pkPDB targets.
+
+            ##New##
+            Manual parsing to retrieve sequence: Atom-ine by Atom-line (exclude ligands) the code retrieves the protein sequence.
+            Residue by residue, the IDs are formed (12A0 = res12,chA,HIS).
+            Chain by chain (triggered by "TER"), the chain-sequences are made (b"EEH" = GLU GLU HIS) and appended to protein-wide chain list "seqs",
+            as well as their corresponding IDs ([b"1A4",b"2A4",b"3A0"] == Glu Glu His) 
+            During parse, the last residue is remembered and inaction taken upon its subsequent parsing.
+
+            Once the sequences and key lists are formed, they are input into edlib. 
+            The keys will be parsed by index and thus doesnt include the deletions which will appear as "-"'s in edlibs nice alignment.
+
+            After the alignment is made, the matches are paired such that the index value slicing the og/model IDs list         #TODO: rename for clarity?
+            increases when there is a match and when there isnt. When there is, a key value pair is made between the             #TODO: save mapping? woulda been good..
+            residue IDs ("1A4" <-->"100A4") between the OG residue and the modeled, thereby mapping any two residue numbering schemes.
+            When deletion in the modeled (should not occur, ever, for this project since at the baseline "modeled" PDBs are the RCSB itself, but 
+            121k PDBs = mysteries), it should mean the next residue in the references matches with the current frame of the nidx, which wouldnt have
+            received a number during enumeration as it enumerated on the unaligned sequences and thus no "-"'s. This is why i, despite it retrieves
+            from reference seq, is incremented upon deletion in the modeled sequence.
+
+            The opposite logic is true for additions in the modeled structure with missing residues in the original strucute inducing an increase in
+            the index slicing the modeled pdb's residue ID keys. This is assumed to be the baseline behavior for this project
+
+    
 
             """
             # helper: extract per-chain sequences & idx-lists into parallel lists
@@ -66,7 +95,7 @@ class parser():
                             continue
 
                         ch,resi = raw[21:22], raw[17:20]
-                        key = raw[22:26].strip() + ch + fullcode.get(resi,b"")
+                        key = raw[22:26].strip() + ch + fullcode.get(resi,b"") #code is {"HIS":0..}
                         
                         if lastkey==key:
                             lastkey=key
@@ -131,8 +160,8 @@ class parser():
         A GOOD CHANCE HAVE A UNIQUE RES NUMBER EXCLUDING INSERTION CODE (A LETTER) FOR EACH RESIDUE IN A CHAIN.
 
         
-        If there is a titratable heavy atom that is the hydrogen pair doner defined by Amber and thus in amber_set, then the residue-wise information is 
-        retained in the long term memory. If the parser never encountered a titratable site (e.g. parsing a raw rcsb pdb with unresolved Lysine side chain
+        If there is a titratable heavy atom that is the hydrogen pair doner/acceptor defined by Amber and thus in amber_set, then the residue-wise information is 
+        retained in the species/coors long term memory. If the parser never encountered a titratable site (e.g. parsing a raw rcsb pdb with unresolved Lysine side chain
         and thus a missing NZ atom), then the residue information will instead be sent to "others", which is the atoms from non-titratable including
         ligands, residues, and non-labeled titratable residues."""
             
@@ -191,6 +220,10 @@ class parser():
         """#TODO"""
         #def stack_columns(data):
         """
+
+        It simply reshapes all the information ive thrown into self.others until it is called in run().
+
+        ###############
         data: list of (int_arr, coord_arr) tuples, where
         - int_arr is either a 1D np.ndarray of ints or an object array of int sub-arrays
         - coord_arr is either a 2D np.ndarray of shape (M,3) or an object array of 2D sub-arrays
@@ -208,7 +241,7 @@ class parser():
 
     
     def parse_others(self, lines):
-        """parse all other non-ligand ATOM lines using entire periodic table"""
+        """parse all other ligand HETATM and non-ligand ATOM lines using entire periodic table"""
         species, coors = [], []
         for line in lines:
             # skip hydrogens
@@ -225,13 +258,23 @@ class parser():
         # #encode everything if user didnt gzip their filess? #TODO
         # TODO: here is where we can encode user input.
 
+        Ligands excludes solvent molecules (exlclusion by lack of membership in ligands).
+        Should a solvent molecule have a residue name of a metal of another element,
+        they will be parsed!
+    
+
         This code opens the gzipped pdb and line by line extracts ATOM and HETATM records.
         
         For atom records, if they are titratable, they are sent to parse_titratable_lines.
         This uses a Z table dict which is only 6,7,8,16 (C,N,O,S).
 
-        Otherwise, they are sent to parse_others, which parses with the full periodic table.
-        Despite there is H in the cofactors dict, only lines which dont have Hydrogens 
+        Otherwise, they are sent to parse_others, which parses nontitratable residues (ATOM),
+        metal (or non-metal pure elements, but goal is metal) cofactors (HETATM records),
+        and ligands (HETATM) with the full periodic table.*
+
+        Others is continuously appended even outside (after) this function so nobody gets left behind.
+        
+        *Despite there is H in the cofactors dict, only lines which dont have Hydrogens 
         (see parse_others) enter the dictionary."""
 
         with gzip.open(self.path, "rb") as f: #TODO?
@@ -251,7 +294,17 @@ class parser():
         self.parse_titratable_lines(titratables)
         
     def get_disulfides(self,lines):
-        """in: titratable lines"""
+        """in: the SITE of the titratable lines and thus Sulfur when Cys
+        intend to minic pdb2pqr 2.05 cutoff was my understanding
+    
+        for cys sulfur lines the coords of the sulfurs are entered into a brute force KNN with radius 2.1 (room from 2.05 for error).
+        If they have other sulfur neighbors, who are the neighbors are retained and they are sent to others and their IDs get removed
+         with masks.
+          
+           Note it doesnt need to work (=correctly identify) with our labeled data thus was for development and to not forget until unlabeled disaster
+           
+           somebodz could test if it worked by running same code run on jesses computer with it hashed out and seeing that the lengths of the pk arrays
+           is the same and if not, by how much."""
         cys_lines = [(i,line) for i,line in enumerate(lines) if line[5:6] == b"C"]
         if cys_lines:   
             cys_coors = [(float(line[1][18:26]),float(line[1][26:34]),float(line[1][34:42])) for line in cys_lines] #TODO confirm its S?
@@ -265,6 +318,42 @@ class parser():
         else: self.disulfides=None
         
     def run(self):
+        """it gets the residue map between the RCSB and assumed pkPDB resi numbering scheme. using edlib seq alignment and parsing 2 pdbs.
+        
+        Then, the pdb is parsed line by line and hydrogens stripped. Here, the sites corresponding to S, NZ, etc., are gathered. If no
+        site, it is sent to others instead of species. that is flag based
+
+        The ids for the modeled and thus parsed PDb are gotten directly from the titratable site ATOM lines e.g. S, NZ..
+        if they exist also in the RCSB pdb, they are assumed a potential candidate for having a pypka label and retained
+        in species/coors and made an ID. Here I form the sitecoors, too, are the centers for forming neighborhoods 
+        downstream.
+
+        I append retained sites (being resolved in OG PDB) for bookkeeping 
+
+        Then, the cys bridges determined with KNN brute force are actually never removed from species. 
+        I suppose I did this on purpose as I didnt wanna
+        miss no labels developing, but would fail unlabeled data #TODO #ALERTA
+
+        TODO: remove cysteines from SPECIES/COORDS/ (or? ) IDS, or remove disulfides because it is redundant sending
+        unmatched labels which include cys  bridges, to others, after already sending them there after disulfides
+
+
+        final mask:
+        Only the structure info from modeled residues is retained. We return the indices corresponding to the intersection
+        of the IDs which for the modeled pdb, should be the same length as the species/coords by design but not default #TODO easy integrity check
+
+        and most of the time is the same as pkPDB targets/sites but far from always, especially with modeled missing residued
+        in modeled parsed PDB.
+
+        The official IDs are those which are shared by both, and thus not my PDBs. lol. forgot to save map until past execute. good thing code is reproducible
+    
+
+        
+        """
+        
+        ""
+        
+        ""
         self.others=[]
         sitecoors=[]
         ids,sites=[],[]
@@ -289,7 +378,7 @@ class parser():
         self.get_disulfides(sites) 
         if self.disulfides: 
             sulf=np.array(self.disulfides)
-            self.others.append((np.concatenate(self.species[sulf]), np.vstack(self.coors[sulf])))
+            self.others.append((np.concatenate(self.species[sulf]), np.vstack(self.coors[sulf]))) #ALERTA
 
         pkpdb=self.targets
         common, pidx, midx = np.intersect1d(pkpdb["ids"], ids,
@@ -320,3 +409,4 @@ class parser():
 )
         return self
 
+#to do rerun with right cysteins and keep map this time
