@@ -28,7 +28,7 @@ three2one = {
     b"LEU":"L", b"LYS":"K", b"MET":"M", b"PHE":"F", b"PRO":"P",
     b"SER":"S", b"THR":"T", b"TRP":"W", b"TYR":"Y", b"VAL":"V"
 }
-# Complete periodic table (IUPAC symbols) + deuterium, as bytes → atomic number
+# Complete periodic table (IUPAC symbols) + deuterium, as bytes → atomic number #debug
 cofactors = {
     b"D":   1,   b"H":   1,
     b"He":  2,   b"Li":  3,   b"Be":  4,   b"B":   5,   b"C":   6,   b"N":   7,
@@ -50,11 +50,16 @@ cofactors = {
     b"Cf": 98,   b"Es": 99,   b"Fm":100,   b"Md":101,   b"No":102,   b"Lr":103,
     b"Rf":104,   b"Db":105,   b"Sg":106,   b"Bh":107,   b"Hs":108,   b"Mt":109,
     b"Ds":110,   b"Rg":111,   b"Cn":112,   b"Nh":113,   b"Fl":114,   b"Mc":115,
-    b"Lv":116,   b"Ts":117,   b"Og":118
+    b"Lv":116,   b"Ts":117,   b"Og":118,
+    #get the ones with symbols
+    b"Zn2+": 30,
+    b"Na1+": 11,
+    b"Be2+": 4,
+    b"Ca2+":20
 }
 
-elements = {b"C":   6,   b"N":   7,
-    b"O":   8,  b"S":  16}
+elements = {b"C":   6,   b"N":   7, b"F":9,
+    b"O":   8, b"P":  15, b"S":  16} #debug2: add F and P since it is in one pdb. #TODO: which pdb!?
 
 
 

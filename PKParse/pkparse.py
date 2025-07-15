@@ -14,7 +14,7 @@ three_to_one = constants["aa_code"]
 elements = constants["elements"]
 cof = constants["cofactors"]
 ligands = constants["ligands"]
-cnbrs = constants["disulfide_nn"]
+#cnbrs = constants["disulfide_nn"]
 amber=constants["amber_sites"]
 
 
@@ -23,7 +23,7 @@ class parser():
     def __init__(self, gzipped_pdb, ref_pdb):
         self.path    = gzipped_pdb
         self.pdb     = gzipped_pdb[-7:-3]
-        self.targets = np.load(f"../../data/targets/{self.pdb}.npz")
+        self.targets =f"../../data/targets/{self.pdb}.npz"
         self.save_dir = "../inputs/"
         self.ligands = ligands
         self.ref_pdb = ref_pdb
@@ -174,35 +174,42 @@ class parser():
 
         # 1) Single-pass parse & group by residue
         for line in lines:
+            try:
+                #skip hydrogens
+                if line.lstrip().startswith(b"H"): continue
+                #strip insertions 
+                resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
             
-            #skip hydrogens
-            if line.lstrip().startswith(b"H"): continue
-            #strip insertions 
-            resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        
 
-            # new residue?  put previous residue in long term memory of potential sites (self.species), or other resis (self.others) depending on flag status
-            if resnum != last_resnum and cur_species:
-                if amber_flag: 
-                    self.species.append(cur_species)
-                    self.coors.append(cur_coords)
-                else: 
-                    others_s.append(cur_species)
-                    others_c.append((cur_coords))
-                cur_species, cur_coords = [], []
-                amber_flag=False
+                # new residue?  put previous residue in long term memory of potential sites (self.species), or other resis (self.others) depending on flag status
+                if resnum != last_resnum and cur_species:
+                    if amber_flag: 
+                        self.species.append(cur_species)
+                        self.coors.append(cur_coords)
+                    else: 
+                        others_s.append(cur_species)
+                        others_c.append((cur_coords))
+                    cur_species, cur_coords = [], []
+                    amber_flag=False
+                
+                #per-residue short term memory accumulates Z + pos info
+                cur_species.append(elements[line[-9:].split()[0][0:]])
+                cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
+
+                #only retain resis with resolved/modeled titratable sites. these lines generate the IDs to be paired with pkPDB targets downstream
+                if line[:5].strip() in amber_set:
+                    amber_flag=True
+                    self.sites.append(line)
+
+                last_resnum = resnum
+            except Exception as e:
+                print(self.pdb)
+                print(e)
+                print(line)
+                return False
+                
+
             
-            #per-residue short term memory accumulates Z + pos info
-            cur_species.append(elements[line[-9:].split()[0][0:]])
-            cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
-
-            #only retain resis with resolved/modeled titratable sites. these lines generate the IDs to be paired with pkPDB targets downstream
-            if line[:5].strip() in amber_set:
-                amber_flag=True
-                self.sites.append(line)
-
-            last_resnum = resnum
-        
         #final long term memory capture
         if amber_flag: 
             self.species.append(cur_species)
@@ -214,6 +221,7 @@ class parser():
 
         #save as arrays for downstream mask operations
         self.species,self.coors=np.array(self.species,dtype=object),np.array(self.coors,dtype=object)
+        return True 
         
     
     def aggregate_others(self):
@@ -291,7 +299,8 @@ class parser():
                 else: others.append(line[12:])
 
         self.parse_others(others)
-        self.parse_titratable_lines(titratables)
+        flag = self.parse_titratable_lines(titratables) #skips lines without an element in my dictionaries. e.g. Deterium, ionized O and N.
+        return flag
         
     def get_disulfides(self,lines):
         """in: the SITE of the titratable lines and thus Sulfur when Cys
@@ -354,16 +363,47 @@ class parser():
         ""
         
         ""
-        self.others=[]
-        sitecoors=[]
-        ids,sites=[],[]
-        
+        if not os.path.exists(self.targets): #skip target files with only ntr and ctr, that I alreadz deleted
+            return
+            
         
         #get species/pos info of titratable residues
         self.residue_map()
         if not self.mapping:
-            return
-        self.parse_pdb()
+            with gzip.open("../badparse.gz", "ab") as f:
+                f.write(self.pdb.encode())
+                f.write(b"\n")
+                return
+        else:
+            #print(self.mapping.items())
+            #with gzip.open("../res_maps.gz", "ab") as f:
+            #    f.write(b"\n")
+            #    f.write(self.pdb.encode())
+            #mapping=tuple(self.mapping.items())
+            #print(mapping)
+            #new, old = list(mapping[0]),list(mapping[1])
+            #print(new,old)
+            #np.save(np.array)
+            map=list(self.mapping.items())
+            np.savez_compressed(f"../res_maps/{self.pdb}.npz", map=map)
+
+                
+
+          
+        
+
+
+        
+        self.others=[]
+        sitecoors,ids,sites=[],[],[]
+        
+        flag=self.parse_pdb()
+        if not flag: #if there was an issue in parsing the elements. should produce errors for Deterium, N1+, O-, and EP.
+            with gzip.open("../badparse.gz", "ab") as f:
+                f.write(self.pdb.encode())
+                f.write(b"\n")
+                return
+    
         
         for line in self.sites:
             id=line[10:18].strip() + line[9:10] + code[line[5:6]] #get ids frrom sites
@@ -375,12 +415,12 @@ class parser():
         sitecoors=np.array(sitecoors).astype(np.float32)
        #that fixes when there is not a titratable site in the titratable residue. now onto targets
         
-        self.get_disulfides(sites) 
-        if self.disulfides: 
-            sulf=np.array(self.disulfides)
-            self.others.append((np.concatenate(self.species[sulf]), np.vstack(self.coors[sulf]))) #ALERTA
+        #self.get_disulfides(sites) 
+        #if self.disulfides: 
+        #    sulf=np.array(self.disulfides)
+        #    self.others.append((np.concatenate(self.species[sulf]), np.vstack(self.coors[sulf]))) #ALERTA
 
-        pkpdb=self.targets
+        pkpdb=np.load(self.targets)
         common, pidx, midx = np.intersect1d(pkpdb["ids"], ids,
                                             return_indices=True)
         site_mask = np.ones(len(self.species), dtype=bool)
