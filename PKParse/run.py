@@ -66,7 +66,7 @@ def run(num_pdbs="all"):
             parser(newpdbs[i], oldpdbs[i]).run()
 
         except Exception as e:
-            pdb=newpdbs[0].split("gz")[-5:-1][0].encode()
+            pdb=newpdbs[i].split("gz")[-5:-1][0].encode()
             print(pdb)
             print("error in", pdb, ":", e)
             with gzip.open("../badparse.gz", "ab") as f:
