@@ -174,40 +174,55 @@ class parser():
 
         # 1) Single-pass parse & group by residue
         for line in lines:
-            try:
-                #skip hydrogens
-                if line.lstrip().startswith(b"H"): continue
-                #strip insertions 
-                resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-            
-
-                # new residue?  put previous residue in long term memory of potential sites (self.species), or other resis (self.others) depending on flag status
-                if resnum != last_resnum and cur_species:
-                    if amber_flag: 
-                        self.species.append(cur_species)
-                        self.coors.append(cur_coords)
-                    else: 
-                        others_s.append(cur_species)
-                        others_c.append((cur_coords))
-                    cur_species, cur_coords = [], []
-                    amber_flag=False
+            if line != b"X": #chain
+                try:
+                    #skip hydrogens
+                    if line.lstrip().startswith(b"H"): continue
+                    #strip insertions 
+                    resnum = line[10:15].strip(b"ABCDEFGHIJKLMNOPQRSTUVWXYZ")
                 
-                #per-residue short term memory accumulates Z + pos info
-                cur_species.append(elements[line[-9:].split()[0][0:]])
-                cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
 
-                #only retain resis with resolved/modeled titratable sites. these lines generate the IDs to be paired with pkPDB targets downstream
-                if line[:5].strip() in amber_set:
-                    amber_flag=True
-                    self.sites.append(line)
+                    # new residue?  put previous residue in long term memory of potential sites (self.species), or other resis (self.others) depending on flag status
+                    if resnum != last_resnum and cur_species:
+                        if amber_flag: 
+                            self.species.append(cur_species)
+                            self.coors.append(cur_coords)
+                        else: 
+                            others_s.append(cur_species)
+                            others_c.append((cur_coords))
+                        cur_species, cur_coords = [], []
+                        amber_flag=False
+                    
+                    #per-residue short term memory accumulates Z + pos info
+                    cur_species.append(elements[line[-9:].split()[0][0:]])
+                    cur_coords.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
 
-                last_resnum = resnum
-            except Exception as e:
-                print(self.pdb)
-                print(e)
-                print(line)
-                return False
+                    #only retain resis with resolved/modeled titratable sites. these lines generate the IDs to be paired with pkPDB targets downstream
+                    if line[:5].strip() in amber_set:
+                        amber_flag=True
+                        self.sites.append(line)
+
+                    last_resnum = resnum
+                except Exception as e:
+                    print(self.pdb)
+                    print(e)
+                    print(line)
+                    return False
+            else: #CHAIN
+                #if resnum != last_resnum and cur_species:
+                if amber_flag: 
+                    self.species.append(cur_species)
+                    self.coors.append(cur_coords)
+                else: 
+                    others_s.append(cur_species)
+                    others_c.append((cur_coords))
+                cur_species, cur_coords = [], []
+                amber_flag=False
+                    
+                   
                 
+
+                    
 
             
         #final long term memory capture
@@ -252,13 +267,13 @@ class parser():
         """parse all other ligand HETATM and non-ligand ATOM lines using entire periodic table"""
         species, coors = [], []
         for line in lines:
+            if line != b"X": #CHAIN
             # skip hydrogens
-            if not line[0:2].strip().startswith(b"H"):
-                #here I use cofactors as my Z number dict --> entire periodic table
-                species.append(cof[line[-9:].split()[0][0:]])
-                coors.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
-                
-        self.others.append((species, coors))
+                if not line[0:2].strip().startswith(b"H"):
+                    #here I use cofactors as my Z number dict --> entire periodic table
+                    species.append(cof[line[-9:].split()[0][0:]])
+                    coors.append((float(line[18:26]), float(line[26:34]), float(line[34:42])))
+
 
     def parse_pdb(self):
         """to do try except re: encoding/gzipped
@@ -294,9 +309,13 @@ class parser():
         for line in lines:
             if line.startswith(b"HETATM"):
                 if line[16:20].strip() in self.ligands or cof: others.append(line[12:])
+
             elif line.startswith(b"ATOM"):
                 if line[16:20].strip() in fullcode: titratables.append(line[12:])
                 else: others.append(line[12:])
+            elif line.startswith(b"TER"):
+                titratables.append(b"X")
+                others.append(b"X")
 
         self.parse_others(others)
         flag = self.parse_titratable_lines(titratables) #skips lines without an element in my dictionaries. e.g. Deterium, ionized O and N.
@@ -433,10 +452,14 @@ class parser():
         self.coors,self.species = self.coors[midx], self.species[midx]
         others=self.aggregate_others()
         #self.hoods(self.coors[midx], self.species[midx])#, self.sitecoors[midx])
-        atom_coords = np.concatenate([*self.coors, np.vstack(others[1])], axis=0).astype(np.float32)
-        atom_elems  = np.concatenate([*self.species,
-                                      others[0]]).astype(np.uint8)
+        if others[1]:
 
+            atom_coords = np.concatenate([*self.coors, np.vstack(others[1])], axis=0).astype(np.float32)
+            atom_elems  = np.concatenate([*self.species,
+                                        others[0]]).astype(np.uint8)
+        else:
+            atom_coords = np.concatenate([*self.coors]).astype(np.float32)
+            atom_elems  = np.concatenate([*self.species]).astype(np.uint8)
 
         np.savez_compressed(
     self.save_dir + f"{self.pdb}.npz",
