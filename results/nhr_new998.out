@@ -1,0 +1,1935 @@
+nhr_new998.py
+
+        [[  53.5005]],
+
+        [[-142.6860]],
+
+        [[   1.2653]],
+
+        [[  28.8565]],
+
+        [[ -37.0167]],
+
+        [[  55.8414]],
+
+        [[  23.0204]],
+
+        [[  14.8422]],
+
+        [[   9.1027]],
+
+        [[  58.0037]],
+
+        [[  60.0718]],
+
+        [[  21.7482]],
+
+        [[  25.3244]],
+
+        [[   4.7959]],
+
+        [[ -39.8449]],
+
+        [[  17.9486]],
+
+        [[   3.8808]],
+
+        [[  32.3179]],
+
+        [[   9.1125]],
+
+        [[  15.2105]],
+
+        [[ -22.9196]],
+
+        [[  29.5722]],
+
+        [[  30.5701]],
+
+        [[-141.4300]],
+
+        [[  74.4000]],
+
+        [[  -2.5487]],
+
+        [[   4.7163]],
+
+        [[  31.6972]],
+
+        [[-116.2959]],
+
+        [[  28.0256]],
+
+        [[  32.6497]],
+
+        [[  58.5425]],
+
+        [[ -17.1752]],
+
+        [[  15.0815]],
+
+        [[-149.2527]],
+
+        [[ -29.0655]],
+
+        [[  32.5572]],
+
+        [[  58.0045]],
+
+        [[ -40.5401]],
+
+        [[  66.7937]],
+
+        [[-102.1910]],
+
+        [[ -24.7126]],
+
+        [[-131.1836]],
+
+        [[  13.4806]],
+
+        [[  28.2867]],
+
+        [[  26.9710]],
+
+        [[ -10.1665]],
+
+        [[  97.1366]],
+
+        [[ -17.5877]],
+
+        [[  31.9074]],
+
+        [[  51.3619]],
+
+        [[  58.3273]],
+
+        [[ -26.9493]],
+
+        [[  36.9325]],
+
+        [[  45.9394]],
+
+        [[  60.4019]],
+
+        [[ -33.3762]],
+
+        [[ -18.2093]],
+
+        [[  60.1256]],
+
+        [[  12.3169]],
+
+        [[  21.3623]],
+
+        [[   7.4209]],
+
+        [[  19.8899]],
+
+        [[  41.2064]],
+
+        [[  -1.3776]],
+
+        [[  -5.9064]],
+
+        [[  -4.4096]],
+
+        [[  90.3391]],
+
+        [[ -36.2174]],
+
+        [[ -13.5407]],
+
+        [[  10.3044]],
+
+        [[-121.3833]],
+
+        [[-122.3684]],
+
+        [[  54.8912]],
+
+        [[  19.0883]],
+
+        [[  20.4505]],
+
+        [[   7.2144]],
+
+        [[  43.1328]],
+
+        [[  43.7575]],
+
+        [[-146.2318]],
+
+        [[  21.1612]],
+
+        [[  31.5353]],
+
+        [[   4.6742]],
+
+        [[  -6.2754]],
+
+        [[ -44.2964]],
+
+        [[  59.0052]],
+
+        [[  11.0161]],
+
+        [[  -0.6685]],
+
+        [[  19.1349]],
+
+        [[ -21.3138]],
+
+        [[  26.3935]],
+
+        [[  44.7149]],
+
+        [[ -14.4392]],
+
+        [[ -54.3541]],
+
+        [[ -24.5181]],
+
+        [[ -27.0316]],
+
+        [[  66.5099]],
+
+        [[ -31.8960]],
+
+        [[  26.8737]],
+
+        [[   6.4770]],
+
+        [[  44.9932]],
+
+        [[   7.1873]],
+
+        [[  -3.9180]],
+
+        [[  48.4494]],
+
+        [[ -19.9034]],
+
+        [[-102.2464]],
+
+        [[  76.3012]],
+
+        [[-114.5203]],
+
+        [[ -19.5218]],
+
+        [[  15.0127]],
+
+        [[  21.8873]],
+
+        [[ -16.3760]],
+
+        [[  -0.3930]],
+
+        [[  88.7096]],
+
+        [[  17.3993]],
+
+        [[ -28.2912]],
+
+        [[  50.8874]],
+
+        [[ -32.7293]],
+
+        [[   8.6897]],
+
+        [[  27.2749]],
+
+        [[  19.5291]],
+
+        [[   6.5438]],
+
+        [[  10.5116]],
+
+        [[  11.5440]],
+
+        [[  19.1363]],
+
+        [[  44.4413]],
+
+        [[  46.9443]],
+
+        [[  -7.5629]],
+
+        [[ -38.0521]],
+
+        [[  41.7432]],
+
+        [[  28.7467]],
+
+        [[ -31.8269]],
+
+        [[ -33.0410]],
+
+        [[  17.0936]],
+
+        [[  56.1497]],
+
+        [[ -51.8075]],
+
+        [[  25.0538]],
+
+        [[  34.1796]],
+
+        [[  37.4724]],
+
+        [[  32.3040]],
+
+        [[  31.6113]]], device='cuda:0', grad_fn=<ConvolutionBackward0>)
+tensor([[[  76.4391]],
+
+        [[  77.7773]],
+
+        [[-128.3963]],
+
+        [[-136.2793]],
+
+        [[  -1.0739]],
+
+        [[   1.3276]],
+
+        [[  23.1787]],
+
+        [[  40.9775]],
+
+        [[ -17.9082]],
+
+        [[ -15.4839]],
+
+        [[  64.9667]],
+
+        [[  58.6328]],
+
+        [[ -10.6811]],
+
+        [[ -24.6910]],
+
+        [[  68.2466]],
+
+        [[  70.8315]],
+
+        [[-117.5490]],
+
+        [[-116.2080]],
+
+        [[-129.0577]],
+
+        [[-127.9108]],
+
+        [[  15.1175]],
+
+        [[  44.2528]],
+
+        [[   4.8464]],
+
+        [[  13.6327]],
+
+        [[  41.2957]],
+
+        [[ -25.9967]],
+
+        [[  40.2197]],
+
+        [[  36.3740]],
+
+        [[  66.0344]],
+
+        [[  62.1311]],
+
+        [[  54.9812]],
+
+        [[  54.6838]],
+
+        [[  14.6522]],
+
+        [[  32.8377]],
+
+        [[  54.2125]],
+
+        [[  43.4783]],
+
+        [[-107.9975]],
+
+        [[ -94.6273]],
+
+        [[  34.0326]],
+
+        [[  26.5223]],
+
+        [[  51.6590]],
+
+        [[  48.1133]],
+
+        [[ -17.9104]],
+
+        [[  41.3469]],
+
+        [[  34.2044]],
+
+        [[ -32.5200]],
+
+        [[  -5.4186]],
+
+        [[  -6.5453]],
+
+        [[  -6.4233]],
+
+        [[  36.3588]],
+
+        [[  22.1135]],
+
+        [[ -22.1413]],
+
+        [[ -18.6975]],
+
+        [[  60.3301]],
+
+        [[  37.6703]],
+
+        [[ -20.6100]],
+
+        [[ -15.8867]],
+
+        [[  56.8922]],
+
+        [[  60.9223]],
+
+        [[  24.6541]],
+
+        [[ -36.6503]],
+
+        [[ -34.2858]],
+
+        [[   1.9852]],
+
+        [[  -4.2880]],
+
+        [[  35.8510]],
+
+        [[  42.9562]],
+
+        [[-118.6211]],
+
+        [[-105.1397]],
+
+        [[ -18.9695]],
+
+        [[ -21.0835]],
+
+        [[  32.4720]],
+
+        [[  31.2381]],
+
+        [[   9.5104]],
+
+        [[ -13.4954]],
+
+        [[  -9.9365]],
+
+        [[  22.3612]],
+
+        [[  46.5912]],
+
+        [[  44.6174]],
+
+        [[  27.9948]],
+
+        [[  42.4879]],
+
+        [[  13.7109]],
+
+        [[  12.5118]],
+
+        [[  84.0160]],
+
+        [[  72.7350]],
+
+        [[  41.3951]],
+
+        [[  24.1666]],
+
+        [[  25.6704]],
+
+        [[  30.5338]],
+
+        [[  27.1212]],
+
+        [[  59.1893]],
+
+        [[  62.8917]],
+
+        [[ -30.4663]],
+
+        [[ -32.4672]],
+
+        [[  47.6524]],
+
+        [[  50.6850]],
+
+        [[ -13.5937]],
+
+        [[  15.3175]],
+
+        [[  46.5207]],
+
+        [[  62.5950]],
+
+        [[  38.0005]],
+
+        [[  -4.4183]],
+
+        [[  14.0379]],
+
+        [[  49.0067]],
+
+        [[  52.4643]],
+
+        [[  55.3470]],
+
+        [[  53.5738]],
+
+        [[  16.2379]],
+
+        [[   3.3638]],
+
+        [[  32.0224]],
+
+        [[  10.5786]],
+
+        [[-147.5573]],
+
+        [[-149.5839]],
+
+        [[ -38.3331]],
+
+        [[ -11.8743]],
+
+        [[   0.1842]],
+
+        [[  18.9693]],
+
+        [[-138.9700]],
+
+        [[ -18.8613]],
+
+        [[-110.9233]],
+
+        [[-130.6877]],
+
+        [[ -33.6978]],
+
+        [[ -25.1655]],
+
+        [[  53.2588]],
+
+        [[  26.4292]],
+
+        [[ -97.0024]],
+
+        [[-105.8689]],
+
+        [[  12.9787]],
+
+        [[  13.5932]],
+
+        [[  20.5676]],
+
+        [[   0.3271]],
+
+        [[ -24.7724]],
+
+        [[ -28.5864]],
+
+        [[ -12.3891]],
+
+        [[   1.0540]],
+
+        [[  15.8631]],
+
+        [[  13.1051]],
+
+        [[  17.8958]],
+
+        [[  17.6745]],
+
+        [[-119.9834]],
+
+        [[ -30.9331]],
+
+        [[ -12.9019]],
+
+        [[ -24.4476]],
+
+        [[  55.4987]],
+
+        [[  55.2962]],
+
+        [[  20.0131]],
+
+        [[  19.7753]],
+
+        [[  38.7776]],
+
+        [[  35.1900]],
+
+        [[ -26.2765]],
+
+        [[ -26.6218]],
+
+        [[  23.4703]],
+
+        [[   7.4773]],
+
+        [[ -86.3319]],
+
+        [[   6.7503]],
+
+        [[  16.2082]],
+
+        [[  17.0684]],
+
+        [[  39.8898]],
+
+        [[  38.3184]],
+
+        [[  30.5542]],
+
+        [[  22.7819]],
+
+        [[  32.0568]],
+
+        [[  31.5185]],
+
+        [[  -5.2715]],
+
+        [[   2.6106]]], device='cuda:0', grad_fn=<ConvolutionBackward0>)
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 432, in <module>
+    feats, centroids = forward_residues(z_res, x_res)         # (R, C)
+  File "/home/becjessi/nhr_new998.py", line 394, in forward_residues
+    h_out, coords = egnn_net(z_r, x_r)          # h_out is [tensor] or tensor
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_new998.py", line 74, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_new998.py", line 45, in forward
+    (h_list, coords) = self.egnn(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 448, in forward
+    feats, coors = egnn(feats, coors, adj_mat = adj_mat, edges = edges, mask = mask)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 319, in forward
+    if exists(self.node_mlp):
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1601, in __getattr__
+    def __getattr__(self, name: str) -> Union[Tensor, 'Module']:
+KeyboardInterrupt
+
+(jessi) bgn1003:~ $ python nhr_new998.py 
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 314, in <module>
+    val_ds   = InMemoryHoodDataset(val_paths)
+  File "/home/becjessi/nhr_new998.py", line 241, in __init__
+    idx = nbrs.kneighbors(sites, return_distance=False)   # (S, N_NEIGHBORS)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/sklearn/neighbors/_base.py", line 850, in kneighbors
+    results = ArgKmin.compute(
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py", line 290, in compute
+    return ArgKmin32.compute(
+  File "sklearn/metrics/_pairwise_distances_reduction/_argkmin.pyx", line 575, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin32.compute
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/threadpoolctl.py", line 592, in __exit__
+    def __exit__(self, type, value, traceback):
+KeyboardInterrupt
+
+(jessi) bgn1003:~ $ python nhr_new998.py 
+{'runid': '20250715_234408', 'num_nbrs': 100, 'num_nbrs_egnn': 8, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 998), 'epochs': 50, 'dim': 12, 'depth': 4, 'basis': 64, 'hidden_dim': 4, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 'None'}
+Epoch   0 | train L1 = 0.8044
+              |  val L1 = 0.6239
+Epoch   1 | train L1 = 0.6629
+              |  val L1 = 0.6097
+Epoch   2 | train L1 = 0.6314
+              |  val L1 = 0.5809
+Epoch   3 | train L1 = 0.6067
+              |  val L1 = 0.5654
+Epoch   4 | train L1 = 0.6026
+              |  val L1 = 0.5948
+Epoch   5 | train L1 = 0.5988
+              |  val L1 = 0.5585
+Epoch   6 | train L1 = 0.5826
+              |  val L1 = 0.5680
+Epoch   7 | train L1 = 0.5774
+              |  val L1 = 0.5567
+Epoch   8 | train L1 = 0.5664
+              |  val L1 = 0.5445
+Epoch   9 | train L1 = 0.5653
+              |  val L1 = 0.5949
+Epoch  10 | train L1 = 0.5547
+              |  val L1 = 0.5327
+Epoch  11 | train L1 = 0.5606
+              |  val L1 = 0.5313
+Epoch  12 | train L1 = 0.5428
+              |  val L1 = 0.5203
+Epoch  13 | train L1 = 0.5320
+              |  val L1 = 0.5075
+Epoch  14 | train L1 = 0.5184
+              |  val L1 = 0.5041
+Epoch  15 | train L1 = 0.5140
+              |  val L1 = 0.4994
+Epoch  16 | train L1 = 0.5050
+              |  val L1 = 0.4944
+Epoch  17 | train L1 = 0.9929
+              |  val L1 = 1.1525
+Epoch  18 | train L1 = 1.1669
+              |  val L1 = 1.1461
+Epoch  19 | train L1 = 1.1603
+              |  val L1 = 1.1402
+Epoch  20 | train L1 = 1.1560
+              |  val L1 = 1.1385
+Epoch  21 | train L1 = 1.1564
+              |  val L1 = 1.1412
+Epoch  22 | train L1 = 1.1584
+              |  val L1 = 1.1452
+Epoch  23 | train L1 = 1.1614
+              |  val L1 = 1.1486
+Epoch  24 | train L1 = 1.1640
+              |  val L1 = 1.1510
+Epoch  25 | train L1 = 1.1652
+              |  val L1 = 1.1518
+Epoch  26 | train L1 = 1.1658
+              |  val L1 = 1.1539
+Epoch  27 | train L1 = 1.1673
+              |  val L1 = 1.1571
+Epoch  28 | train L1 = 1.1700
+              |  val L1 = 1.1596
+Epoch  29 | train L1 = 1.1720
+              |  val L1 = 1.1616
+Epoch  30 | train L1 = 1.1738
+              |  val L1 = 1.1632
+Epoch  31 | train L1 = 1.1750
+              |  val L1 = 1.1646
+Epoch  32 | train L1 = 1.1763
+              |  val L1 = 1.1659
+Epoch  33 | train L1 = 1.1777
+              |  val L1 = 1.1674
+Epoch  34 | train L1 = 1.1864
+              |  val L1 = 1.2102
+Epoch  35 | train L1 = 1.2628
+              |  val L1 = 1.2546
+Epoch  36 | train L1 = 1.2512
+              |  val L1 = 1.1979
+Epoch  37 | train L1 = 1.2027
+              |  val L1 = 1.1843
+Epoch  38 | train L1 = 1.1878
+              |  val L1 = 1.1759
+Epoch  39 | train L1 = 1.1867
+              |  val L1 = 1.1727
+Epoch  40 | train L1 = 1.1853
+              |  val L1 = 1.1776
+Epoch  41 | train L1 = 1.1849
+              |  val L1 = 1.1694
+Epoch  42 | train L1 = 1.1834
+              |  val L1 = 1.1689
+Epoch  43 | train L1 = 1.1823
+              |  val L1 = 1.1766
+Epoch  44 | train L1 = 1.1830
+              |  val L1 = 1.1691
+Epoch  45 | train L1 = inf
+              |  val L1 = inf
+Epoch  46 | train L1 = 60.8133
+              |  val L1 = 36.3478
+Epoch  47 | train L1 = 25.2097
+              |  val L1 = 15.9910
+Epoch  48 | train L1 = 10.7936
+              |  val L1 = 7.1193
+Epoch  49 | train L1 = 4.8529
+              |  val L1 = 3.3646
+Saved checkpoint_20250716_000250.pt (18.7 min) 18.709990004698437
+(jessi) bgn1003:~ $ python nhr_new998.py 
+{'runid': '20250716_000626', 'num_nbrs': 100, 'num_nbrs_egnn': 9, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 3.0080321285140563), 'epochs': 10, 'dim': 12, 'depth': 4, 'basis': 75, 'hidden_dim': 48, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 815852, 'architect': b'[StackedEGNN(\n  (blocks): ModuleList(\n    (0): EGNNBlock(\n      (egnn): EGNN_Network(\n        (token_emb): Embedding(118, 12)\n        (pos_emb): Embedding(1000, 12)\n        (layers): ModuleList(\n          (0-3): 4 x ModuleList(\n            (0): None\n            (1): EGNN(\n              (edge_mlp): Sequential(\n                (0): Linear(in_features=25, out_features=50, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=50, out_features=16, bias=True)\n                (4): SiLU()\n              )\n              (node_norm): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n              (coors_norm): CoorsNorm()\n              (node_mlp): Sequential(\n                (0): Linear(in_features=28, out_features=24, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=24, out_features=12, bias=True)\n              )\n              (coors_mlp): Sequential(\n                (0): Linear(in_features=16, out_features=64, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=64, out_features=1, bias=True)\n              )\n            )\n          )\n        )\n      )\n      (norm1): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n      (ffn): Sequential(\n        (0): Linear(in_features=12, out_features=576, bias=True)\n        (1): PReLU(num_parameters=1)\n        (2): Linear(in_features=576, out_features=12, bias=True)\n      )\n      (norm2): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n    )\n  )\n), EGNN(\n  (edge_mlp): Sequential(\n    (0): Linear(in_features=3, out_features=6, bias=True)\n    (1): Identity()\n    (2): SiLU()\n    (3): Linear(in_features=6, out_features=16, bias=True)\n    (4): SiLU()\n  )\n  (node_norm): Identity()\n  (coors_norm): Identity()\n  (node_mlp): Sequential(\n    (0): Linear(in_features=17, out_features=2, bias=True)\n    (1): Identity()\n    (2): SiLU()\n    (3): Linear(in_features=2, out_features=1, bias=True)\n  )\n), Conv1d(100, 1, kernel_size=(87,), stride=(1,)), LearnableRBF(), AttentionBlock(\n  (encoding): PositionalEncoding(\n    (dropout): Dropout(p=0.03, inplace=False)\n  )\n  (attn): MultiheadAttention(\n    (out_proj): NonDynamicallyQuantizableLinear(in_features=87, out_features=87, bias=True)\n  )\n  (norm1): LayerNorm((87,), eps=1e-05, elementwise_affine=True)\n  (ffn): Sequential(\n    (0): Linear(in_features=87, out_features=4176, bias=True)\n    (1): PReLU(num_parameters=1)\n    (2): Linear(in_features=4176, out_features=87, bias=True)\n  )\n  (norm2): LayerNorm((87,), eps=1e-05, elementwise_affine=True)\n), Linear(in_features=1, out_features=1, bias=True)]'}
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 450, in <module>
+    scaler.scale(loss).backward()
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.05 GiB (GPU 0; 79.25 GiB total capacity; 13.90 GiB already allocated; 997.44 MiB free; 16.15 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(jessi) bgn1003:~ $ python nhr_new998.py 
+{'runid': '20250716_000909', 'num_nbrs': 100, 'num_nbrs_egnn': 9, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 3.0080321285140563), 'epochs': 10, 'dim': 12, 'depth': 4, 'basis': 75, 'hidden_dim': 48, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 815852, 'architect': b'[StackedEGNN(\n  (blocks): ModuleList(\n    (0): EGNNBlock(\n      (egnn): EGNN_Network(\n        (token_emb): Embedding(118, 12)\n        (pos_emb): Embedding(1000, 12)\n        (layers): ModuleList(\n          (0-3): 4 x ModuleList(\n            (0): None\n            (1): EGNN(\n              (edge_mlp): Sequential(\n                (0): Linear(in_features=25, out_features=50, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=50, out_features=16, bias=True)\n                (4): SiLU()\n              )\n              (node_norm): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n              (coors_norm): CoorsNorm()\n              (node_mlp): Sequential(\n                (0): Linear(in_features=28, out_features=24, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=24, out_features=12, bias=True)\n              )\n              (coors_mlp): Sequential(\n                (0): Linear(in_features=16, out_features=64, bias=True)\n                (1): Dropout(p=0.01, inplace=False)\n                (2): SiLU()\n                (3): Linear(in_features=64, out_features=1, bias=True)\n              )\n            )\n          )\n        )\n      )\n      (norm1): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n      (ffn): Sequential(\n        (0): Linear(in_features=12, out_features=576, bias=True)\n        (1): PReLU(num_parameters=1)\n        (2): Linear(in_features=576, out_features=12, bias=True)\n      )\n      (norm2): LayerNorm((12,), eps=1e-05, elementwise_affine=True)\n    )\n  )\n), EGNN(\n  (edge_mlp): Sequential(\n    (0): Linear(in_features=3, out_features=6, bias=True)\n    (1): Identity()\n    (2): SiLU()\n    (3): Linear(in_features=6, out_features=16, bias=True)\n    (4): SiLU()\n  )\n  (node_norm): Identity()\n  (coors_norm): Identity()\n  (node_mlp): Sequential(\n    (0): Linear(in_features=17, out_features=2, bias=True)\n    (1): Identity()\n    (2): SiLU()\n    (3): Linear(in_features=2, out_features=1, bias=True)\n  )\n), Conv1d(100, 1, kernel_size=(87,), stride=(1,)), LearnableRBF(), AttentionBlock(\n  (encoding): PositionalEncoding(\n    (dropout): Dropout(p=0.03, inplace=False)\n  )\n  (attn): MultiheadAttention(\n    (out_proj): NonDynamicallyQuantizableLinear(in_features=87, out_features=87, bias=True)\n  )\n  (norm1): LayerNorm((87,), eps=1e-05, elementwise_affine=True)\n  (ffn): Sequential(\n    (0): Linear(in_features=87, out_features=4176, bias=True)\n    (1): PReLU(num_parameters=1)\n    (2): Linear(in_features=4176, out_features=87, bias=True)\n  )\n  (norm2): LayerNorm((87,), eps=1e-05, elementwise_affine=True)\n), Linear(in_features=1, out_features=1, bias=True)]'}
+Epoch   0 | train L1 = 1.1932
+              |  val L1 = 1.8307
+Epoch   1 | train L1 = 1.1806
+              |  val L1 = 1.1703
+Epoch   2 | train L1 = 1.1804
+              |  val L1 = 1.1682
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 450, in <module>
+    scaler.scale(loss).backward()
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+
+(jessi) bgn1003:~ $ python nhr_new998.py 
+{'runid': '20250716_001105', 'num_nbrs': 100, 'num_nbrs_egnn': 9, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 3.0080321285140563), 'epochs': 10, 'dim': 12, 'depth': 4, 'basis': 75, 'hidden_dim': 48, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 815852}
+Epoch   0 | train L1 = 1.1930
+              |  val L1 = 1.1689
+Epoch   1 | train L1 = 1.1810
+              |  val L1 = 1.1693
+Epoch   2 | train L1 = 1.1804
+              |  val L1 = 1.1682
+Epoch   3 | train L1 = 1.1802
+              |  val L1 = 1.1687
+Epoch   4 | train L1 = 1.1803
+              |  val L1 = 1.1682
+Epoch   5 | train L1 = 1.1804
+              |  val L1 = 1.1684
+Epoch   6 | train L1 = 1.1801
+              |  val L1 = 1.1689
+Epoch   7 | train L1 = 1.1804
+              |  val L1 = 1.1686
+Epoch   8 | train L1 = 1.1803
+              |  val L1 = 1.1684
+Epoch   9 | train L1 = 1.1802
+              |  val L1 = 1.1699
+Saved checkpoint_20250716_001529.pt (4.4 min) 4.412799747784932
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,942
+{'runid': '20250716_021931', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 2, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12942}
+Epoch   0 | train L1 = 0.9894
+              |  val L1 = 0.8048
+Epoch   1 | train L1 = 0.8026
+              |  val L1 = 0.7353
+Epoch   2 | train L1 = 0.7680
+              |  val L1 = 0.7173
+Epoch   3 | train L1 = 0.7420
+              |  val L1 = 0.6925
+Epoch   4 | train L1 = 0.6966
+              |  val L1 = 0.6466
+Epoch   5 | train L1 = 0.6701
+              |  val L1 = 0.6184
+Epoch   6 | train L1 = 0.6474
+              |  val L1 = 0.6065
+Epoch   7 | train L1 = 0.6366
+              |  val L1 = 0.5993
+Epoch   8 | train L1 = 0.6282
+              |  val L1 = 0.5965
+Epoch   9 | train L1 = 0.6232
+              |  val L1 = 0.6067
+Saved checkpoint_20250716_022142.pt (2.2 min) 2.2064026673634847
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 358, in <module>
+    mha_layer = AttentionBlock(embed_dim=dim + basis,
+  File "/home/becjessi/nhr_new998.py", line 123, in __init__
+    self.attn  = nn.MultiheadAttention(embed_dim, num_heads)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 968, in __init__
+    self.head_dim = embed_dim // num_heads
+ZeroDivisionError: integer division or modulo by zero
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_022458', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 6, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9277
+              |  val L1 = 0.7720
+Epoch   1 | train L1 = 0.7943
+              |  val L1 = 0.7799
+Epoch   2 | train L1 = 0.7690
+              |  val L1 = 0.7465
+Epoch   3 | train L1 = 0.7538
+              |  val L1 = 0.7145
+Epoch   4 | train L1 = 0.7384
+              |  val L1 = 0.6879
+Epoch   5 | train L1 = 0.7167
+              |  val L1 = 0.6622
+Epoch   6 | train L1 = 0.6784
+              |  val L1 = 0.6148
+Epoch   7 | train L1 = 0.6463
+              |  val L1 = 0.5983
+Epoch   8 | train L1 = 0.6254
+              |  val L1 = 0.5884
+Epoch   9 | train L1 = 0.6165
+              |  val L1 = 0.5771
+Saved checkpoint_20250716_022714.pt (2.3 min) 2.2767471512158712
+(jessi) bgn1003:~ $ python nhr_new998.py 
+skipping 1000inputs/3ftl.npz: Expected n_neighbors <= n_samples_fit, but n_neighbors = 200, n_samples_fit = 106, n_samples = 2
+Whole model          : 14,814
+{'runid': '20250716_022835', 'num_nbrs': 200, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 748, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 6, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 14814}
+Epoch   0 | train L1 = 0.9909
+              |  val L1 = 0.8012
+Epoch   1 | train L1 = 0.8030
+              |  val L1 = 0.7554
+Epoch   2 | train L1 = 0.7668
+              |  val L1 = 0.7456
+Epoch   3 | train L1 = 0.7429
+              |  val L1 = 0.6936
+Epoch   4 | train L1 = 0.7113
+              |  val L1 = 0.6448
+Epoch   5 | train L1 = 0.6671
+              |  val L1 = 0.6095
+Epoch   6 | train L1 = 0.6338
+              |  val L1 = 0.6072
+Epoch   7 | train L1 = 0.6238
+              |  val L1 = 0.6068
+Epoch   8 | train L1 = 0.6095
+              |  val L1 = 0.6093
+Epoch   9 | train L1 = 0.6021
+              |  val L1 = 0.5666
+Saved checkpoint_20250716_023203.pt (3.5 min) 3.4875134030977883
+(jessi) bgn1003:~ $ python nhr_new998.py 
+skipping 1000inputs/3ftl.npz: Expected n_neighbors <= n_samples_fit, but n_neighbors = 200, n_samples_fit = 106, n_samples = 2
+Whole model          : 14,814
+{'runid': '20250716_023216', 'num_nbrs': 200, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 748, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 14814}
+Epoch   0 | train L1 = 0.9980
+              |  val L1 = 0.7954
+Epoch   1 | train L1 = 0.7985
+              |  val L1 = 0.7619
+Epoch   2 | train L1 = 0.7570
+              |  val L1 = 0.7213
+Epoch   3 | train L1 = 0.7000
+              |  val L1 = 0.6291
+Epoch   4 | train L1 = 0.6592
+              |  val L1 = 0.6144
+salloc: Job 8665137 has exceeded its time limit and its allocation has been revoked.
+                                                                                    blogin2:~ $ ssh bgn1003
+Last login: Wed Jul 16 02:34:56 2025 from blogin2.usr.hlrn.de
+
+********************************************************************************
+*                                                                              *
+*               Welcome to NHR@ZIB system "Lise" on node bgn1003               *
+*               (Rocky Linux 8.10, Environment Modules 5.4.0)                  *
+*                                                                              *
+*  Manual   ->  https://user.nhr.zib.de                                        *
+*  Support  ->  mailto:support@nhr.zib.de                                      *
+*                                                                              *
+********************************************************************************
+
+Module NHRZIBenv loaded.
+Module sw.a100 loaded.
+Module slurm (current version 24.11.5) loaded.
+bgn1003:~ $ module load anaconda3
+Module for Anaconda 2023.09 (Python 3.9.20) loaded.
+bgn1003:~ $ conda activate jessi
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 73,758
+{'runid': '20250716_025519', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 64, 'hidden_dim': 4, 'num_heads': 68, 'dropout': [0.02, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 73758}
+Epoch   0 | train L1 = 0.9126
+              |  val L1 = 0.7905
+Epoch   1 | train L1 = 0.8121
+              |  val L1 = 0.7397
+Epoch   2 | train L1 = 0.7578
+              |  val L1 = 0.7065
+Epoch   3 | train L1 = 0.7032
+              |  val L1 = 0.6631
+Epoch   4 | train L1 = 0.6732
+              |  val L1 = 0.6381
+Epoch   5 | train L1 = 0.6581
+              |  val L1 = 0.6154
+Epoch   6 | train L1 = 0.6431
+              |  val L1 = 0.6114
+Epoch   7 | train L1 = 0.6355
+              |  val L1 = 0.6083
+Epoch   8 | train L1 = 0.6251
+              |  val L1 = 0.6177
+Epoch   9 | train L1 = 0.6173
+              |  val L1 = 0.5980
+Saved checkpoint_20250716_025936.pt (4.3 min) 4.2995972792307535
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 57,038
+{'runid': '20250716_030029', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 20, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 28, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 57038}
+Epoch   0 | train L1 = 0.8704
+              |  val L1 = 0.7604
+Epoch   1 | train L1 = 0.7508
+              |  val L1 = 0.6938
+Epoch   2 | train L1 = 0.6947
+              |  val L1 = 0.6454
+Epoch   3 | train L1 = 0.6220
+              |  val L1 = 0.5850
+Epoch   4 | train L1 = 0.5983
+              |  val L1 = 0.5624
+Epoch   5 | train L1 = 0.5838
+              |  val L1 = 0.5704
+Epoch   6 | train L1 = 0.5679
+              |  val L1 = 0.5452
+Epoch   7 | train L1 = 0.5508
+              |  val L1 = 0.5133
+Epoch   8 | train L1 = 0.5380
+              |  val L1 = 0.5307
+Epoch   9 | train L1 = 0.5264
+              |  val L1 = 0.5112
+Saved checkpoint_20250716_030505.pt (4.6 min) 4.613545735677083
+(jessi) bgn1003:~ $ 
+
+              |  val L1 = 1.0784
+Epoch   7 | train L1 = 1.0929
+              |  val L1 = 1.0819
+Epoch   8 | train L1 = 1.0931
+              |  val L1 = 1.0840
+Epoch   9 | train L1 = 1.1087
+              |  val L1 = 1.1224
+Saved checkpoint_20250716_004948.pt (2.4 min) 2.372440958023071
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 11,670
+{'runid': '20250716_005039', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 2, 'depth': 4, 'basis': 8, 'hidden_dim': 3, 'num_heads': 10, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 11670}
+Epoch   0 | train L1 = 1.1188
+              |  val L1 = 1.0986
+Epoch   1 | train L1 = 1.0966
+              |  val L1 = 1.0803
+Epoch   2 | train L1 = 1.0946
+              |  val L1 = 1.0789
+Epoch   3 | train L1 = 1.0943
+              |  val L1 = 1.0785
+Epoch   4 | train L1 = 1.0945
+              |  val L1 = 1.0792
+Epoch   5 | train L1 = 1.0933
+              |  val L1 = 1.0801
+Epoch   6 | train L1 = 1.0929
+              |  val L1 = 1.0785
+Epoch   7 | train L1 = 1.0928
+              |  val L1 = 1.0816
+Epoch   8 | train L1 = 1.0929
+              |  val L1 = 1.0852
+Epoch   9 | train L1 = 1.0932
+              |  val L1 = 1.0795
+Saved checkpoint_20250716_005303.pt (2.4 min) 2.4146438876787824
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,840
+{'runid': '20250716_005339', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 3, 'depth': 4, 'basis': 8, 'hidden_dim': 3, 'num_heads': 11, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13840}
+Epoch   0 | train L1 = 1.0004
+              |  val L1 = 0.8866
+Epoch   1 | train L1 = 0.8662
+              |  val L1 = 0.8042
+Epoch   2 | train L1 = 0.8332
+              |  val L1 = 0.8025
+Epoch   3 | train L1 = 0.8233
+              |  val L1 = 0.8045
+Epoch   4 | train L1 = 0.7984
+              |  val L1 = 0.7561
+Epoch   5 | train L1 = 0.7804
+              |  val L1 = 0.7479
+Epoch   6 | train L1 = 0.7649
+              |  val L1 = 0.7415
+Epoch   7 | train L1 = 0.7543
+              |  val L1 = 0.7199
+Epoch   8 | train L1 = 0.7442
+              |  val L1 = 0.7119
+Epoch   9 | train L1 = 0.7414
+              |  val L1 = 0.7104
+Saved checkpoint_20250716_005602.pt (2.4 min) 2.3970569570859275
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 10,534
+{'runid': '20250716_005632', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 3, 'depth': 2, 'basis': 8, 'hidden_dim': 3, 'num_heads': 11, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 10534}
+Epoch   0 | train L1 = 1.0068
+              |  val L1 = 0.9053
+Epoch   1 | train L1 = 0.8992
+              |  val L1 = 0.8239
+Epoch   2 | train L1 = 0.8545
+              |  val L1 = 0.8006
+Epoch   3 | train L1 = 0.8285
+              |  val L1 = 0.7920
+Epoch   4 | train L1 = 0.8016
+              |  val L1 = 0.7989
+Epoch   5 | train L1 = 0.7740
+              |  val L1 = 0.7233
+Epoch   6 | train L1 = 0.7591
+              |  val L1 = 0.7149
+Epoch   7 | train L1 = 0.7501
+              |  val L1 = 0.7128
+Epoch   8 | train L1 = 0.7443
+              |  val L1 = 0.7060
+Epoch   9 | train L1 = 0.7379
+              |  val L1 = 0.7038
+Saved checkpoint_20250716_005816.pt (1.7 min) 1.7489430785179139
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 10,808
+{'runid': '20250716_005822', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 3, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 11, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 10808}
+Epoch   0 | train L1 = 1.0525
+              |  val L1 = 0.8906
+Epoch   1 | train L1 = 0.8812
+              |  val L1 = 0.8133
+Epoch   2 | train L1 = 0.8321
+              |  val L1 = 0.8003
+Epoch   3 | train L1 = 0.8085
+              |  val L1 = 0.7667
+Epoch   4 | train L1 = 0.7836
+              |  val L1 = 0.7454
+Epoch   5 | train L1 = 0.7647
+              |  val L1 = 0.7263
+Epoch   6 | train L1 = 0.7538
+              |  val L1 = 0.7099
+Epoch   7 | train L1 = 0.7385
+              |  val L1 = 0.7022
+Epoch   8 | train L1 = 0.7238
+              |  val L1 = 0.6972
+Epoch   9 | train L1 = 0.7133
+              |  val L1 = 0.6740
+Saved checkpoint_20250716_010006.pt (1.8 min) 1.7509708364804586
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 11,082
+{'runid': '20250716_010037', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 3, 'depth': 2, 'basis': 8, 'hidden_dim': 5, 'num_heads': 11, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 11082}
+Epoch   0 | train L1 = 1.0229
+              |  val L1 = 0.8505
+Epoch   1 | train L1 = 0.8664
+              |  val L1 = 0.8166
+Epoch   2 | train L1 = 0.8439
+              |  val L1 = 0.7962
+Epoch   3 | train L1 = 0.8270
+              |  val L1 = 0.7925
+Epoch   4 | train L1 = 0.8163
+              |  val L1 = 0.7702
+Epoch   5 | train L1 = 0.8020
+              |  val L1 = 0.7531
+Epoch   6 | train L1 = 0.7830
+              |  val L1 = 0.7366
+Epoch   7 | train L1 = 0.7732
+              |  val L1 = 0.7266
+Epoch   8 | train L1 = 0.7607
+              |  val L1 = 0.7262
+Epoch   9 | train L1 = 0.7539
+              |  val L1 = 0.7182
+Saved checkpoint_20250716_010224.pt (1.8 min) 1.7919869661331176
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,384
+{'runid': '20250716_010318', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 7, 'hidden_dim': 4, 'num_heads': 11, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12384}
+Epoch   0 | train L1 = 1.0020
+              |  val L1 = 0.9159
+Epoch   1 | train L1 = 0.8608
+              |  val L1 = 0.8127
+Epoch   2 | train L1 = 0.8311
+              |  val L1 = 0.7875
+Epoch   3 | train L1 = 0.8098
+              |  val L1 = 0.7720
+Epoch   4 | train L1 = 0.8009
+              |  val L1 = 0.7902
+Epoch   5 | train L1 = 0.7939
+              |  val L1 = 0.7742
+Epoch   6 | train L1 = 0.7821
+              |  val L1 = 0.7607
+Epoch   7 | train L1 = 0.7714
+              |  val L1 = 0.7447
+Epoch   8 | train L1 = 0.7581
+              |  val L1 = 0.7212
+Epoch   9 | train L1 = 0.7519
+              |  val L1 = 0.7141
+Saved checkpoint_20250716_010501.pt (1.7 min) 1.735622191429138
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_010611', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9265
+              |  val L1 = 0.7889
+Epoch   1 | train L1 = 0.8165
+              |  val L1 = 0.7724
+Epoch   2 | train L1 = 0.8034
+              |  val L1 = 0.7637
+Epoch   3 | train L1 = 0.7959
+              |  val L1 = 0.7600
+Epoch   4 | train L1 = 0.7916
+              |  val L1 = 0.7567
+Epoch   5 | train L1 = 0.7833
+              |  val L1 = 0.7895
+Epoch   6 | train L1 = 0.7726
+              |  val L1 = 0.7528
+Epoch   7 | train L1 = 0.7560
+              |  val L1 = 0.7170
+Epoch   8 | train L1 = 0.7338
+              |  val L1 = 0.6983
+Epoch   9 | train L1 = 0.7221
+              |  val L1 = 0.6888
+Saved checkpoint_20250716_010756.pt (1.8 min) 1.7695058067639668
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 14,600
+{'runid': '20250716_010926', 'num_nbrs': 100, 'num_nbrs_egnn': 2, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 3, 'depth': 2, 'basis': 16, 'hidden_dim': 4, 'num_heads': 19, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 14600}
+Epoch   0 | train L1 = 1.0275
+              |  val L1 = 0.8960
+Epoch   1 | train L1 = 0.8834
+              |  val L1 = 0.8377
+Epoch   2 | train L1 = 0.8454
+              |  val L1 = 0.7948
+Epoch   3 | train L1 = 0.7998
+              |  val L1 = 0.7440
+Epoch   4 | train L1 = 0.7747
+              |  val L1 = 0.7348
+Epoch   5 | train L1 = 0.7633
+              |  val L1 = 0.7298
+Epoch   6 | train L1 = 0.7523
+              |  val L1 = 0.7130
+Epoch   7 | train L1 = 0.7422
+              |  val L1 = 0.7093
+Epoch   8 | train L1 = 0.7315
+              |  val L1 = 0.7114
+Epoch   9 | train L1 = 0.7270
+              |  val L1 = 0.7058
+Saved checkpoint_20250716_011117.pt (1.8 min) 1.8490206281344095
+(jessi) bgn1003:~ $ python nhr_new998.py 
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 336, in <module>
+    train_ds = InMemoryHoodDataset(train_paths)
+  File "/home/becjessi/nhr_new998.py", line 254, in __init__
+    dat = np.load(p, allow_pickle=True)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/numpy/lib/npyio.py", line 444, in load
+    ret = NpzFile(fid, own_fid=own_fid, allow_pickle=allow_pickle,
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/numpy/lib/npyio.py", line 190, in __init__
+    _zip = zipfile_factory(fid)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/numpy/lib/npyio.py", line 103, in zipfile_factory
+    return zipfile.ZipFile(file, *args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/zipfile.py", line 1272, in __init__
+    self._RealGetContents()
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/zipfile.py", line 1335, in _RealGetContents
+    endrec = _EndRecData(fp)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/zipfile.py", line 267, in _EndRecData
+    fpin.seek(0, 2)
+KeyboardInterrupt
+
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_011218', 'num_nbrs': 100, 'num_nbrs_egnn': 9, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9147
+              |  val L1 = 0.7788
+Epoch   1 | train L1 = 0.7901
+              |  val L1 = 0.7330
+Epoch   2 | train L1 = 0.7730
+              |  val L1 = 0.7286
+Epoch   3 | train L1 = 0.7554
+              |  val L1 = 0.7082
+Epoch   4 | train L1 = 0.7406
+              |  val L1 = 0.7189
+Epoch   5 | train L1 = 0.6893
+              |  val L1 = 0.6535
+Epoch   6 | train L1 = 0.6659
+              |  val L1 = 0.6152
+Epoch   7 | train L1 = 0.6483
+              |  val L1 = 0.6050
+Epoch   8 | train L1 = 0.6370
+              |  val L1 = 0.6039
+^[[AEpoch   9 | train L1 = 0.6315
+              |  val L1 = 0.5965
+Saved checkpoint_20250716_011611.pt (3.9 min) 3.907469606399536
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_011712', 'num_nbrs': 100, 'num_nbrs_egnn': 12, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9259
+              |  val L1 = 0.8113
+Epoch   1 | train L1 = 0.7985
+              |  val L1 = 0.7331
+Epoch   2 | train L1 = 0.7698
+              |  val L1 = 0.7197
+Epoch   3 | train L1 = 0.7506
+              |  val L1 = 0.7023
+Epoch   4 | train L1 = 0.7288
+              |  val L1 = 0.6788
+Epoch   5 | train L1 = 0.6936
+              |  val L1 = 0.6585
+Epoch   6 | train L1 = 0.6641
+              |  val L1 = 0.6231
+Epoch   7 | train L1 = 0.6494
+              |  val L1 = 0.5986
+Epoch   8 | train L1 = 0.6369
+              |  val L1 = 0.5975
+Epoch   9 | train L1 = 0.6275
+              |  val L1 = 0.6065
+Saved checkpoint_20250716_011902.pt (1.8 min) 1.8488269567489624
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_012009', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9137
+              |  val L1 = 0.8445
+Epoch   1 | train L1 = 0.7898
+              |  val L1 = 0.7312
+Epoch   2 | train L1 = 0.7678
+              |  val L1 = 0.7234
+Epoch   3 | train L1 = 0.7468
+              |  val L1 = 0.6973
+Epoch   4 | train L1 = 0.7287
+              |  val L1 = 0.6823
+Epoch   5 | train L1 = 0.6720
+              |  val L1 = 0.6122
+Epoch   6 | train L1 = 0.6362
+              |  val L1 = 0.5961
+Epoch   7 | train L1 = 0.6220
+              |  val L1 = 0.5810
+Epoch   8 | train L1 = 0.6135
+              |  val L1 = 0.5769
+Epoch   9 | train L1 = 0.6072
+              |  val L1 = 0.5881
+Saved checkpoint_20250716_012159.pt (1.8 min) 1.8421778400739035
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_012229', 'num_nbrs': 100, 'num_nbrs_egnn': 10, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9172
+              |  val L1 = 0.7961
+Epoch   1 | train L1 = 0.7945
+              |  val L1 = 0.7367
+Epoch   2 | train L1 = 0.7683
+              |  val L1 = 0.7214
+Epoch   3 | train L1 = 0.7532
+              |  val L1 = 0.7023
+Epoch   4 | train L1 = 0.7250
+              |  val L1 = 0.6706
+Epoch   5 | train L1 = 0.6864
+              |  val L1 = 0.6448
+Epoch   6 | train L1 = 0.6603
+              |  val L1 = 0.6037
+Epoch   7 | train L1 = 0.6442
+              |  val L1 = 0.6028
+Epoch   8 | train L1 = 0.6307
+              |  val L1 = 0.6061
+Epoch   9 | train L1 = 0.6235
+              |  val L1 = 0.6156
+Saved checkpoint_20250716_012418.pt (1.8 min) 1.8336926738421122
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 14,624
+{'runid': '20250716_012433', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 3, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 14624}
+Epoch   0 | train L1 = 0.9482
+              |  val L1 = 0.8222
+Epoch   1 | train L1 = 0.8322
+              |  val L1 = 0.7772
+Epoch   2 | train L1 = 0.7907
+              |  val L1 = 0.7393
+Epoch   3 | train L1 = 0.7624
+              |  val L1 = 0.7027
+Epoch   4 | train L1 = 0.7210
+              |  val L1 = 0.7273
+Epoch   5 | train L1 = 0.7029
+              |  val L1 = 0.6740
+Epoch   6 | train L1 = 0.6934
+              |  val L1 = 0.6822
+Epoch   7 | train L1 = 0.6809
+              |  val L1 = 0.6590
+Epoch   8 | train L1 = 0.6701
+              |  val L1 = 0.6265
+Epoch   9 | train L1 = 0.6532
+              |  val L1 = 0.6147
+Saved checkpoint_20250716_012644.pt (2.2 min) 2.2045150876045225
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_012720', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9129
+              |  val L1 = 0.8353
+Epoch   1 | train L1 = 0.7823
+              |  val L1 = 0.7300
+Epoch   2 | train L1 = 0.7632
+              |  val L1 = 0.7126
+Epoch   3 | train L1 = 0.7428
+              |  val L1 = 0.6926
+Epoch   4 | train L1 = 0.7215
+              |  val L1 = 0.6586
+Epoch   5 | train L1 = 0.6601
+              |  val L1 = 0.5910
+Epoch   6 | train L1 = 0.6203
+              |  val L1 = 0.6009
+Epoch   7 | train L1 = 0.6057
+              |  val L1 = 0.5744
+Epoch   8 | train L1 = 0.5989
+              |  val L1 = 0.5553
+Epoch   9 | train L1 = 0.5908
+              |  val L1 = 0.5804
+Saved checkpoint_20250716_012910.pt (1.8 min) 1.8427234888076782
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,776
+{'runid': '20250716_013126', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 12776}
+Epoch   0 | train L1 = 0.8981
+              |  val L1 = 0.8020
+Epoch   1 | train L1 = 0.7860
+              |  val L1 = 0.7363
+Epoch   2 | train L1 = 0.7685
+              |  val L1 = 0.7196
+Epoch   3 | train L1 = 0.7500
+              |  val L1 = 0.7045
+Epoch   4 | train L1 = 0.7256
+              |  val L1 = 0.6575
+Epoch   5 | train L1 = 0.6818
+              |  val L1 = 0.6665
+Epoch   6 | train L1 = 0.6537
+              |  val L1 = 0.6083
+Epoch   7 | train L1 = 0.6393
+              |  val L1 = 0.5918
+Epoch   8 | train L1 = 0.6278
+              |  val L1 = 0.5919
+Epoch   9 | train L1 = 0.6206
+              |  val L1 = 0.5834
+Saved checkpoint_20250716_013315.pt (1.8 min) 1.834484616915385
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 12,774
+{'runid': '20250716_013449', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 12774}
+Epoch   0 | train L1 = 0.9108
+              |  val L1 = 0.8412
+Epoch   1 | train L1 = 0.7839
+              |  val L1 = 0.7275
+Epoch   2 | train L1 = 0.7624
+              |  val L1 = 0.7130
+Epoch   3 | train L1 = 0.7415
+              |  val L1 = 0.6941
+Epoch   4 | train L1 = 0.7224
+              |  val L1 = 0.6665
+Epoch   5 | train L1 = 0.6691
+              |  val L1 = 0.6198
+Epoch   6 | train L1 = 0.6290
+              |  val L1 = 0.5951
+Epoch   7 | train L1 = 0.6182
+              |  val L1 = 0.5767
+Epoch   8 | train L1 = 0.6136
+              |  val L1 = 0.5758
+Epoch   9 | train L1 = 0.6042
+              |  val L1 = 0.5940
+Saved checkpoint_20250716_013639.pt (1.8 min) 1.8377347389856975
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 14,250
+{'runid': '20250716_013720', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 14250}
+Epoch   0 | train L1 = 0.9264
+              |  val L1 = 0.7689
+Epoch   1 | train L1 = 0.7892
+              |  val L1 = 0.7469
+Epoch   2 | train L1 = 0.7650
+              |  val L1 = 0.7215
+Epoch   3 | train L1 = 0.7237
+              |  val L1 = 0.6600
+Epoch   4 | train L1 = 0.6843
+              |  val L1 = 0.6563
+Epoch   5 | train L1 = 0.6634
+              |  val L1 = 0.6144
+Epoch   6 | train L1 = 0.6449
+              |  val L1 = 0.6029
+Epoch   7 | train L1 = 0.6302
+              |  val L1 = 0.6114
+Epoch   8 | train L1 = 0.6159
+              |  val L1 = 0.5801
+Epoch   9 | train L1 = 0.6100
+              |  val L1 = 0.5654
+Saved checkpoint_20250716_013913.pt (1.9 min) 1.903623898824056
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,270
+{'runid': '20250716_013941', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13270}
+Epoch   0 | train L1 = 0.9255
+              |  val L1 = 0.7734
+Epoch   1 | train L1 = 0.7895
+              |  val L1 = 0.7298
+Epoch   2 | train L1 = 0.7626
+              |  val L1 = 0.7141
+Epoch   3 | train L1 = 0.7472
+              |  val L1 = 0.7086
+Epoch   4 | train L1 = 0.7225
+              |  val L1 = 0.6755
+Epoch   5 | train L1 = 0.6907
+              |  val L1 = 0.6883
+Epoch   6 | train L1 = 0.6570
+              |  val L1 = 0.6045
+Epoch   7 | train L1 = 0.6344
+              |  val L1 = 0.5872
+Epoch   8 | train L1 = 0.6255
+              |  val L1 = 0.5797
+Epoch   9 | train L1 = 0.6157
+              |  val L1 = 0.5736
+Saved checkpoint_20250716_014134.pt (1.9 min) 1.8980864524841308
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,287
+{'runid': '20250716_014250', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13287}
+Epoch   0 | train L1 = 0.9296
+              |  val L1 = 0.7655
+Epoch   1 | train L1 = 0.8025
+              |  val L1 = 0.7378
+Epoch   2 | train L1 = 0.7627
+              |  val L1 = 0.7633
+Epoch   3 | train L1 = 0.7440
+              |  val L1 = 0.6874
+Epoch   4 | train L1 = 0.7135
+              |  val L1 = 0.6543
+Epoch   5 | train L1 = 0.6823
+              |  val L1 = 0.6532
+Epoch   6 | train L1 = 0.6574
+              |  val L1 = 0.6209
+Epoch   7 | train L1 = 0.6411
+              |  val L1 = 0.6036
+Epoch   8 | train L1 = 0.6299
+              |  val L1 = 0.6102
+Epoch   9 | train L1 = 0.6218
+              |  val L1 = 0.5948
+Saved checkpoint_20250716_014445.pt (1.9 min) 1.9275572260220846
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_014601', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9233
+              |  val L1 = 0.7667
+Epoch   1 | train L1 = 0.7879
+              |  val L1 = 0.8146
+Epoch   2 | train L1 = 0.7622
+              |  val L1 = 0.7085
+Epoch   3 | train L1 = 0.7364
+              |  val L1 = 0.6731
+Epoch   4 | train L1 = 0.7081
+              |  val L1 = 0.6617
+Epoch   5 | train L1 = 0.6768
+              |  val L1 = 0.6223
+Epoch   6 | train L1 = 0.6579
+              |  val L1 = 0.6105
+Epoch   7 | train L1 = 0.6412
+              |  val L1 = 0.5994
+Epoch   8 | train L1 = 0.6276
+              |  val L1 = 0.5957
+Epoch   9 | train L1 = 0.6202
+              |  val L1 = 0.5846
+Saved checkpoint_20250716_014754.pt (1.9 min) 1.9018505414326985
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_014814', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9232
+              |  val L1 = 0.7652
+Epoch   1 | train L1 = 0.7882
+              |  val L1 = 0.7905
+Epoch   2 | train L1 = 0.7582
+              |  val L1 = 0.7186
+Epoch   3 | train L1 = 0.7310
+              |  val L1 = 0.6710
+Epoch   4 | train L1 = 0.7004
+              |  val L1 = 0.6332
+Epoch   5 | train L1 = 0.6572
+              |  val L1 = 0.6030
+Epoch   6 | train L1 = 0.6284
+              |  val L1 = 0.5837
+Epoch   7 | train L1 = 0.6115
+              |  val L1 = 0.5702
+Epoch   8 | train L1 = 0.5972
+              |  val L1 = 0.5655
+Epoch   9 | train L1 = 0.5868
+              |  val L1 = 0.5663
+Saved checkpoint_20250716_015007.pt (1.9 min) 1.905355433622996
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_015038', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9232
+              |  val L1 = 0.7668
+Epoch   1 | train L1 = 0.7887
+              |  val L1 = 0.7637
+Epoch   2 | train L1 = 0.7553
+              |  val L1 = 0.7206
+Epoch   3 | train L1 = 0.7159
+              |  val L1 = 0.6549
+Epoch   4 | train L1 = 0.6771
+              |  val L1 = 0.6250
+Epoch   5 | train L1 = 0.6476
+              |  val L1 = 0.5959
+Epoch   6 | train L1 = 0.6298
+              |  val L1 = 0.5878
+Epoch   7 | train L1 = 0.6201
+              |  val L1 = 0.5749
+Epoch   8 | train L1 = 0.6055
+              |  val L1 = 0.6047
+Epoch   9 | train L1 = 0.5989
+              |  val L1 = 0.5561
+Saved checkpoint_20250716_015231.pt (1.9 min) 1.9004618287086488
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_015326', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9232
+              |  val L1 = 0.7673
+Epoch   1 | train L1 = 0.7884
+              |  val L1 = 0.8004
+Epoch   2 | train L1 = 0.7553
+              |  val L1 = 0.7208
+Epoch   3 | train L1 = 0.7210
+              |  val L1 = 0.6590
+Epoch   4 | train L1 = 0.6836
+              |  val L1 = 0.6368
+Epoch   5 | train L1 = 0.6535
+              |  val L1 = 0.6196
+Epoch   6 | train L1 = 0.6352
+              |  val L1 = 0.6017
+Epoch   7 | train L1 = 0.6179
+              |  val L1 = 0.5753
+Epoch   8 | train L1 = 0.6034
+              |  val L1 = 0.5860
+Epoch   9 | train L1 = 0.5947
+              |  val L1 = 0.5605
+Saved checkpoint_20250716_015519.pt (1.9 min) 1.8988129417101542
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_015629', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9233
+              |  val L1 = 0.7662
+Epoch   1 | train L1 = 0.7874
+              |  val L1 = 0.7689
+Epoch   2 | train L1 = 0.7555
+              |  val L1 = 0.7281
+Epoch   3 | train L1 = 0.7294
+              |  val L1 = 0.6723
+Epoch   4 | train L1 = 0.6929
+              |  val L1 = 0.6377
+Epoch   5 | train L1 = 0.6468
+              |  val L1 = 0.5881
+Epoch   6 | train L1 = 0.6215
+              |  val L1 = 0.5846
+Epoch   7 | train L1 = 0.6074
+              |  val L1 = 0.5689
+Epoch   8 | train L1 = 0.5920
+              |  val L1 = 0.5703
+Epoch   9 | train L1 = 0.5816
+              |  val L1 = 0.5498
+Saved checkpoint_20250716_015822.pt (1.9 min) 1.8960716803868611
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_015851', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9233
+              |  val L1 = 0.7642
+Epoch   1 | train L1 = 0.7882
+              |  val L1 = 0.8059
+Epoch   2 | train L1 = 0.7618
+              |  val L1 = 0.7190
+Epoch   3 | train L1 = 0.7366
+              |  val L1 = 0.6774
+Epoch   4 | train L1 = 0.7120
+              |  val L1 = 0.6644
+Epoch   5 | train L1 = 0.6829
+              |  val L1 = 0.6267
+Epoch   6 | train L1 = 0.6599
+              |  val L1 = 0.6135
+Epoch   7 | train L1 = 0.6442
+              |  val L1 = 0.5962
+Epoch   8 | train L1 = 0.6289
+              |  val L1 = 0.5935
+Epoch   9 | train L1 = 0.6189
+              |  val L1 = 0.5832
+Saved checkpoint_20250716_020044.pt (1.9 min) 1.8980220715204874
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_020052', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9233
+              |  val L1 = 0.7658
+Epoch   1 | train L1 = 0.7881
+              |  val L1 = 0.7986
+Epoch   2 | train L1 = 0.7620
+              |  val L1 = 0.7200
+Epoch   3 | train L1 = 0.7382
+              |  val L1 = 0.6784
+Epoch   4 | train L1 = 0.7141
+              |  val L1 = 0.6655
+Epoch   5 | train L1 = 0.6836
+              |  val L1 = 0.6300
+Epoch   6 | train L1 = 0.6628
+              |  val L1 = 0.6122
+Epoch   7 | train L1 = 0.6461
+              |  val L1 = 0.5955
+Epoch   8 | train L1 = 0.6286
+              |  val L1 = 0.5900
+Epoch   9 | train L1 = 0.6170
+              |  val L1 = 0.5809
+Saved checkpoint_20250716_020245.pt (1.9 min) 1.8927793820699057
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 17,314
+{'runid': '20250716_020317', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 4, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 5.0, 'loss': L1Loss(), 'params': 17314}
+Epoch   0 | train L1 = 0.9431
+              |  val L1 = 0.7772
+Epoch   1 | train L1 = 0.7972
+              |  val L1 = 0.7513
+Epoch   2 | train L1 = 0.7727
+              |  val L1 = 0.7329
+Epoch   3 | train L1 = 0.7061
+              |  val L1 = 0.6396
+Epoch   4 | train L1 = 0.6522
+              |  val L1 = 0.6169
+Epoch   5 | train L1 = 0.6387
+              |  val L1 = 0.5893
+Epoch   6 | train L1 = 0.6284
+              |  val L1 = 0.5928
+Epoch   7 | train L1 = 0.6184
+              |  val L1 = 0.5712
+Epoch   8 | train L1 = 0.6107
+              |  val L1 = 0.5867
+Epoch   9 | train L1 = 0.6063
+              |  val L1 = 0.5631
+Saved checkpoint_20250716_020554.pt (2.6 min) 2.6320984840393065
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_020716', 'num_nbrs': 100, 'num_nbrs_egnn': (11,), 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13614}
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 458, in <module>
+    feats, centroids = forward_residues(z_res, x_res)         # (R, C)
+  File "/home/becjessi/nhr_new998.py", line 420, in forward_residues
+    h_out, coords = egnn_net(z_r, x_r)          # h_out is [tensor] or tensor
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_new998.py", line 74, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_new998.py", line 45, in forward
+    (h_list, coords) = self.egnn(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 448, in forward
+    feats, coors = egnn(feats, coors, adj_mat = adj_mat, edges = edges, mask = mask)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 230, in forward
+    use_nearest = num_nearest > 0 or only_sparse_neighbors
+TypeError: '>' not supported between instances of 'tuple' and 'int'
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_020827', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9284
+              |  val L1 = 0.7758
+Epoch   1 | train L1 = 0.7953
+              |  val L1 = 0.7765
+Epoch   2 | train L1 = 0.7640
+              |  val L1 = 0.7313
+Epoch   3 | train L1 = 0.7415
+              |  val L1 = 0.6756
+Epoch   4 | train L1 = 0.6958
+              |  val L1 = 0.6400
+Epoch   5 | train L1 = 0.6476
+              |  val L1 = 0.5943
+Epoch   6 | train L1 = 0.6097
+              |  val L1 = 0.5769
+Epoch   7 | train L1 = 0.5978
+              |  val L1 = 0.5607
+Epoch   8 | train L1 = 0.5830
+              |  val L1 = 0.5561
+Epoch   9 | train L1 = 0.5768
+              |  val L1 = 0.5461
+Saved checkpoint_20250716_021019.pt (1.9 min) 1.8910342812538148
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 11,904
+{'runid': '20250716_021221', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 3, 'hidden_dim': 4, 'num_heads': 7, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 11904}
+Epoch   0 | train L1 = 0.9613
+              |  val L1 = 0.7931
+Epoch   1 | train L1 = 0.7859
+              |  val L1 = 0.7454
+Epoch   2 | train L1 = 0.7483
+              |  val L1 = 0.6902
+Epoch   3 | train L1 = 0.7181
+              |  val L1 = 0.6703
+Epoch   4 | train L1 = 0.6973
+              |  val L1 = 0.6631
+Epoch   5 | train L1 = 0.6743
+              |  val L1 = 0.6428
+Epoch   6 | train L1 = 0.6542
+              |  val L1 = 0.6253
+Epoch   7 | train L1 = 0.6431
+              |  val L1 = 0.6135
+Epoch   8 | train L1 = 0.6323
+              |  val L1 = 0.6195
+Epoch   9 | train L1 = 0.6206
+              |  val L1 = 0.5933
+Saved checkpoint_20250716_021410.pt (1.8 min) 1.8215657075246174
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,609
+{'runid': '20250716_021449', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13609}
+/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/loss.py:101: UserWarning: Using a target size (torch.Size([187])) that is different to the input size (torch.Size([374])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 470, in <module>
+    loss  = criterion(preds.flatten(), y_res)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 101, in forward
+    return F.l1_loss(input, target, reduction=self.reduction)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/functional.py", line 3263, in l1_loss
+    expanded_input, expanded_target = torch.broadcast_tensors(input, target)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/functional.py", line 74, in broadcast_tensors
+    return _VF.broadcast_tensors(tensors)  # type: ignore[attr-defined]
+RuntimeError: The size of tensor a (374) must match the size of tensor b (187) at non-singleton dimension 0
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 22,353
+{'runid': '20250716_021638', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 8, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 16, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 22353}
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 468, in <module>
+    preds=conv(preds).to(device)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Calculated padded input size per channel: (1). Kernel size: (2). Kernel size can't be greater than actual input size
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,950
+{'runid': '20250716_021739', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 5, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13950}
+Epoch   0 | train L1 = 0.9980
+              |  val L1 = 0.8146
+Epoch   1 | train L1 = 0.8109
+              |  val L1 = 0.7550
+Epoch   2 | train L1 = 0.7840
+              |  val L1 = 0.7914
+Epoch   3 | train L1 = 0.7563
+              |  val L1 = 0.7012
+Epoch   4 | train L1 = 0.7218
+              |  val L1 = 0.6701
+Epoch   5 | train L1 = 0.6939
+              |  val L1 = 0.6469
+Epoch   6 | train L1 = 0.6724
+              |  val L1 = 0.6624
+Epoch   7 | train L1 = 0.6617
+              |  val L1 = 0.6235
+Epoch   8 | train L1 = 0.6487
+              |  val L1 = 0.6126
+Epoch   9 | train L1 = 0.6394
+              |  val L1 = 0.6370
+Saved checkpoint_20250716_021931.pt (1.9 min) 1.8832368930180867
+(jessi) bgn1003:~ $ python nhr_new998.py 
+/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/optim/adamw.py:50: UserWarning: optimizer contains a parameter group with duplicate parameters; in future, this will cause an error; see github.com/pytorch/pytorch/issues/40967 for more information
+  super().__init__(params, defaults)
+Whole model          : 13,614
+{'runid': '20250716_022041', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9196
+              |  val L1 = 0.7755
+Epoch   1 | train L1 = 0.8032
+              |  val L1 = 0.7784
+Epoch   2 | train L1 = 0.7870
+              |  val L1 = 0.7684
+Epoch   3 | train L1 = 0.7753
+              |  val L1 = 0.7310
+Epoch   4 | train L1 = 0.7668
+              |  val L1 = 0.7207
+Epoch   5 | train L1 = 0.7541
+              |  val L1 = 0.7048
+Epoch   6 | train L1 = 0.7380
+              |  val L1 = 0.6892
+Epoch   7 | train L1 = 0.7116
+              |  val L1 = 0.6550
+Epoch   8 | train L1 = 0.6855
+              |  val L1 = 0.6470
+Epoch   9 | train L1 = 0.6726
+              |  val L1 = 0.6307
+Saved checkpoint_20250716_022252.pt (2.2 min) 2.2025441606839498
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 17,598
+{'runid': '20250716_022304', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 16, 'hidden_dim': 4, 'num_heads': 20, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 17598}
+Epoch   0 | train L1 = 0.9645
+              |  val L1 = 0.7969
+Epoch   1 | train L1 = 0.7630
+              |  val L1 = 0.6301
+Epoch   2 | train L1 = 0.6781
+              |  val L1 = 0.6438
+Epoch   3 | train L1 = 0.6435
+              |  val L1 = 0.6302
+Epoch   4 | train L1 = 0.6333
+              |  val L1 = 0.5830
+Epoch   5 | train L1 = 0.6128
+              |  val L1 = 0.6320
+Epoch   6 | train L1 = 0.6049
+              |  val L1 = 0.5570
+Epoch   7 | train L1 = 0.5962
+              |  val L1 = 0.5498
+Epoch   8 | train L1 = 0.5810
+              |  val L1 = 0.5871
+Epoch   9 | train L1 = 0.5792
+              |  val L1 = 0.5448
+Saved checkpoint_20250716_022506.pt (2.0 min) 2.048544132709503
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 21,951
+{'runid': '20250716_022606', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 6, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 21951}
+Epoch   0 | train L1 = 1.0013
+              |  val L1 = 0.8600
+Epoch   1 | train L1 = 0.7922
+              |  val L1 = 0.7174
+Epoch   2 | train L1 = 0.7546
+              |  val L1 = 0.7001
+Epoch   3 | train L1 = 0.7225
+              |  val L1 = 0.7104
+Epoch   4 | train L1 = 0.7001
+              |  val L1 = 0.6421
+Epoch   5 | train L1 = 0.6676
+              |  val L1 = 0.6287
+Epoch   6 | train L1 = 0.6497
+              |  val L1 = 0.6437
+Epoch   7 | train L1 = 0.6375
+              |  val L1 = 0.6236
+Epoch   8 | train L1 = 0.6219
+              |  val L1 = 0.6004
+Epoch   9 | train L1 = 0.6106
+              |  val L1 = 0.5815
+Saved checkpoint_20250716_022915.pt (3.2 min) 3.1641777952512107
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 13,614
+{'runid': '20250716_023022', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 13614}
+Epoch   0 | train L1 = 0.9308
+              |  val L1 = 0.7777
+Epoch   1 | train L1 = 0.8025
+              |  val L1 = 0.7881
+Epoch   2 | train L1 = 0.7659
+              |  val L1 = 0.7412
+Epoch   3 | train L1 = 0.7407
+              |  val L1 = 0.6849
+Epoch   4 | train L1 = 0.7062
+              |  val L1 = 0.6349
+Epoch   5 | train L1 = 0.6573
+              |  val L1 = 0.6017
+Epoch   6 | train L1 = 0.6119
+              |  val L1 = 0.5857
+Epoch   7 | train L1 = 0.5967
+              |  val L1 = 0.5563
+Epoch   8 | train L1 = 0.5861
+              |  val L1 = 0.5554
+Epoch   9 | train L1 = 0.5775
+              |  val L1 = 0.5503
+Saved checkpoint_20250716_023316.pt (2.9 min) 2.9221503456433613
+(jessi) bgn1003:~ $ python nhr_new998.py 
+skipping 1000inputs/3ftl.npz: Expected n_neighbors <= n_samples_fit, but n_neighbors = 200, n_samples_fit = 106, n_samples = 2
+Whole model          : 14,814
+{'runid': '20250716_023340', 'num_nbrs': 200, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 748, 249), 'epochs': 10, 'dim': 4, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 14814}
+Connection to bgn1003 closed by remote host.
+Connection to bgn1003 closed.
+(jessi) blogin2:~ $ ssh bgn1003
+Last login: Wed Jul 16 02:55:00 2025 from blogin2.usr.hlrn.de
+
+********************************************************************************
+*                                                                              *
+*               Welcome to NHR@ZIB system "Lise" on node bgn1003               *
+*               (Rocky Linux 8.10, Environment Modules 5.4.0)                  *
+*                                                                              *
+*  Manual   ->  https://user.nhr.zib.de                                        *
+*  Support  ->  mailto:support@nhr.zib.de                                      *
+*                                                                              *
+********************************************************************************
+
+Module NHRZIBenv loaded.
+Module sw.a100 loaded.
+Module slurm (current version 24.11.5) loaded.
+bgn1003:~ $ python nhr_new998.py 
+-bash: python: command not found
+bgn1003:~ $ module load anaconda3
+Module for Anaconda 2023.09 (Python 3.9.20) loaded.
+bgn1003:~ $ conda activate jessi
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 103,406
+{'runid': '20250716_025925', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 12, 'depth': 2, 'basis': 64, 'hidden_dim': 4, 'num_heads': 76, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 103406}
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_new998.py", line 457, in <module>
+    feats, centroids = forward_residues(z_res, x_res)         # (R, C)
+  File "/home/becjessi/nhr_new998.py", line 424, in forward_residues
+    rbf = rbf_layer(coords)                     # (R, N, N, basis)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_new998.py", line 98, in forward
+    return torch.exp(-self.gamma * (d - mu)**2)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 774.00 MiB (GPU 0; 79.25 GiB total capacity; 2.86 GiB already allocated; 471.38 MiB free; 2.97 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(jessi) bgn1003:~ $ python nhr_new998.py 
+Whole model          : 22,358
+{'runid': '20250716_030217', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.001], 'dataset': ('1000inputs/*.npz', 749, 249), 'epochs': 10, 'dim': 8, 'depth': 2, 'basis': 8, 'hidden_dim': 4, 'num_heads': 16, 'dropout': [0.01, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 22358}
+Epoch   0 | train L1 = 0.9063
+              |  val L1 = 0.7746
+Epoch   1 | train L1 = 0.7926
+              |  val L1 = 0.7377
+Epoch   2 | train L1 = 0.7249
+              |  val L1 = 0.6697
+Epoch   3 | train L1 = 0.6717
+              |  val L1 = 0.6365
+Epoch   4 | train L1 = 0.6476
+              |  val L1 = 0.6184
+Epoch   5 | train L1 = 0.6292
+              |  val L1 = 0.6063
+Epoch   6 | train L1 = 0.6173
+              |  val L1 = 0.6010
+Epoch   7 | train L1 = 0.6666
+              |  val L1 = 0.5736
+Epoch   8 | train L1 = 0.5833
+              |  val L1 = 0.5553
+Epoch   9 | train L1 = 0.5719
+              |  val L1 = 0.5507
+Saved checkpoint_20250716_030605.pt (3.8 min) 3.826940083503723
+(jessi) bgn1003:~ $ 
