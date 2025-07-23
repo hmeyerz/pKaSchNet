@@ -1,0 +1,16 @@
+#ignore inputs 
+inputs/
+
+#ignore datasets
+*.zip
+pkegnn_dataset.zip
+*.tar.*
+
+__pycache__/
+*.pyc
+
+inputs_old/
+inputs_old/*.npz
+
+res_maps/
+res_maps/*.npz
