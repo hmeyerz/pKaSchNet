@@ -15,6 +15,7 @@ import os
 
 
 data_dir = os.getcwd()
+save_dir = "../../data/pkegnn_INS/inputs"   
 
 fullcode = {
     b"HIS":b"0", b"ASP":b"1", b"LYS":b"2",
@@ -35,7 +36,7 @@ three2one = {
     b"LEU":"L", b"LYS":"K", b"MET":"M", b"PHE":"F", b"PRO":"P",
     b"SER":"S", b"THR":"T", b"TRP":"W", b"TYR":"Y", b"VAL":"V"
 }
-#new
+#new #TODO fix excluding helium #TODO fake atom EP? #TODO when time to parse unfixed PDBs, make Parser turn everything upper, and make this dict Uppercase.
 # Complete periodic table (IUPAC symbols) + deuterium, as bytes → atomic number #debug
 cofactors = {
     b"He":  2,   b"Li":  3,   b"Be":  4,   b"B":   5,   b"C":   6,   b"N":   7,
@@ -71,6 +72,7 @@ elements = {b"C":   6,   b"N":   7, b"F":9,
 
 
 
+
 def constants():
     """use because pkparser is per pdb."""
     ligands = np.load(data_dir + "/data/ligands.npz")["data"]
@@ -94,5 +96,8 @@ def load_train_dir(fixed_pdbs,rcsb_pdbs):
     #fixed_pdbs=modeled_paths
     _, og, mdled = np.intersect1d(np.char.array([f[-11:-7] for f in rcsb_pdbs]),np.char.array([f[-7:-3] for f in fixed_pdbs]), return_indices=True)
     return fixed_pdbs[mdled], rcsb_pdbs[og]
+
+def inputs_directory():
+    return save_dir
 
 

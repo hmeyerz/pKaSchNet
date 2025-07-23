@@ -179,8 +179,8 @@ else:
     scaler   = None
 
 # 3) instantiate everything
-dim, basis = 12, 8 #scale to 3,16 at least # dim must be divisible by 2
-depth=2 #scale to 2, at least
+dim, basis = 12,8 #scale to 3,16 at least # dim must be divisible by 2
+depth=4 #scale to 2, at least
 hidden_dim=4
 dropout=0.04
 cutoff=20.0

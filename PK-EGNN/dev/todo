@@ -1,0 +1,8 @@
+compile installation
+encode user incoming
+thorough data integrity check
+assemble hold out set
+decorrelate inputs, decide identity value with test data which excludes from train set
+fix directories on notebooks i want executable, after final directory rearrangements. indicate in a read me or something,
+which are intended to be historical and which are executable.
+decide what to call pkegnn and what to call pkaschnet and stick with it
