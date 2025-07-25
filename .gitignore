@@ -15,4 +15,4 @@ inputs_old/*.npz
 res_maps/
 res_maps/*.npz
 data/pkparse_OUTS/seqs/
-data/pkparse_OUTS/seqs/*
+#data/pkparse_OUTS/seqs/*
