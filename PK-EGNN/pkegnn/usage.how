@@ -1,0 +1,1 @@
+python3 train.py --epochs 1 --num_paths 2 --n_aggregator pool --use_prot False --use_boost False --f_aggregator linear
