@@ -1,0 +1,353 @@
+2.51176118850708 sec
+Saved checkpoint: ckpt_20250727_022614.pt
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_022919
+params: 9407
+Traceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 211, in <module>
+    tr=run(cfg,tr_loader,True)
+  File "/home/becjessi/nhr_modular.py", line 193, in run
+    pred=model(z,x).flatten(); loss=p_fn(pred,y)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_modular.py", line 124, in forward
+    preds = self.prot(preds.unsqueeze(0),
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 258, in forward
+    nbhd_ranking, nbhd_indices = ranking.topk(num_nearest, dim = -1, largest = False)
+RuntimeError: selected index k out of range
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023125
+params: 8079
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+[2/200]  train mse nan | mse val nan
+     additional metrics:  [2/200]  train nan | val nan
+
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 211, in <module>
+    tr=run(cfg,tr_loader,True)
+  File "/home/becjessi/nhr_modular.py", line 193, in run
+    pred=model(z,x).flatten(); loss=p_fn(pred,y)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_modular.py", line 101, in forward
+    h,coord=self.egnn(z,x); h=h[0]                # (R,N,dim)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 52, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 30, in forward
+    h_list, coords = self.egnn(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 448, in forward
+    feats, coors = egnn(feats, coors, adj_mat = adj_mat, edges = edges, mask = mask)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 287, in forward
+    m_ij = self.edge_mlp(edge_input)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023249
+params: 8079
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+[2/200]  train mse nan | mse val nan
+     additional metrics:  [2/200]  train nan | val nan
+
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 212, in <module>
+    va=run(cfg,va_loader,False)
+  File "/home/becjessi/nhr_modular.py", line 193, in run
+    pred=model(z,x).flatten(); loss=p_fn(pred,y)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_modular.py", line 101, in forward
+    h,coord=self.egnn(z,x); h=h[0]                # (R,N,dim)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 52, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 30, in forward
+    h_list, coords = self.egnn(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 448, in forward
+    feats, coors = egnn(feats, coors, adj_mat = adj_mat, edges = edges, mask = mask)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 303, in forward
+    coor_weights = self.coors_mlp(m_ij)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023341
+params: 8071
+[1/200]  train mse 3.2781 | mse val 3.2650
+     additional metrics:  [1/200]  train 1.2014 | val 1.2064
+
+[2/200]  train mse 3.1712 | mse val 2.6334
+     additional metrics:  [2/200]  train 1.1851 | val 1.1212
+
+lose nan by removing conv. 
+
+nvm it only delayed.
+
+
+.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023249
+params: 8079
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+[2/200]  train mse nan | mse val nan
+     additional metrics:  [2/200]  train nan | val nan
+
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 212, in <module>
+    va=run(cfg,va_loader,False)
+  File "/home/becjessi/nhr_modular.py", line 193, in run
+    pred=model(z,x).flatten(); loss=p_fn(pred,y)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_modular.py", line 101, in forward
+    h,coord=self.egnn(z,x); h=h[0]                # (R,N,dim)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 52, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 30, in forward
+    h_list, coords = self.egnn(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 448, in forward
+    feats, coors = egnn(feats, coors, adj_mat = adj_mat, edges = edges, mask = mask)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/egnn_pytorch/egnn_pytorch.py", line 303, in forward
+    coor_weights = self.coors_mlp(m_ij)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023341
+params: 8071
+[1/200]  train mse 3.2781 | mse val 3.2650
+     additional metrics:  [1/200]  train 1.2014 | val 1.2064
+
+[2/200]  train mse 3.1712 | mse val 2.6334
+     additional metrics:  [2/200]  train 1.1851 | val 1.1212
+
+[3/200]  train mse 2.5584 | mse val 2.6005
+     additional metrics:  [3/200]  train 1.0991 | val 1.1067
+
+[4/200]  train mse 2.5350 | mse val 2.4359
+     additional metrics:  [4/200]  train 1.0936 | val 1.0689
+
+[5/200]  train mse 2.5159 | mse val 2.5933
+     additional metrics:  [5/200]  train 1.0916 | val 1.1003
+
+[6/200]  train mse 2.2880 | mse val 2.0831
+     additional metrics:  [6/200]  train 1.0473 | val 1.0028
+
+[7/200]  train mse 2.0190 | mse val 2.0181
+     additional metrics:  [7/200]  train 0.9927 | val 0.9752
+
+[8/200]  train mse 1.9525 | mse val 1.9400
+     additional metrics:  [8/200]  train 0.9786 | val 0.9838
+
+[9/200]  train mse 1.8916 | mse val 1.7982
+     additional metrics:  [9/200]  train 0.9637 | val 0.9233
+
+[10/200]  train mse 1.7567 | mse val 1.7551
+     additional metrics:  [10/200]  train 0.9189 | val 0.9289
+
+[11/200]  train mse 1.6918 | mse val 1.6949
+     additional metrics:  [11/200]  train 0.8993 | val 0.8963
+
+[12/200]  train mse 1.5897 | mse val 1.5631
+     additional metrics:  [12/200]  train 0.8684 | val 0.8608
+
+[13/200]  train mse 1.4028 | mse val 1.4252
+     additional metrics:  [13/200]  train 0.7959 | val 0.7818
+
+[14/200]  train mse 1.2989 | mse val 1.4866
+     additional metrics:  [14/200]  train 0.7573 | val 0.8357
+
+[15/200]  train mse 1.2355 | mse val 1.2028
+     additional metrics:  [15/200]  train 0.7358 | val 0.7093
+
+[16/200]  train mse 1.1756 | mse val 1.1624
+     additional metrics:  [16/200]  train 0.7181 | val 0.6979
+
+[17/200]  train mse 1.1316 | mse val 1.1696
+     additional metrics:  [17/200]  train 0.7025 | val 0.7078
+
+[18/200]  train mse 1.1144 | mse val 1.1666
+     additional metrics:  [18/200]  train 0.6994 | val 0.7093
+
+[19/200]  train mse 1.0857 | mse val 1.1202
+     additional metrics:  [19/200]  train 0.6882 | val 0.6953
+
+[20/200]  train mse 1.0679 | mse val 1.2676
+     additional metrics:  [20/200]  train 0.6821 | val 0.7261
+
+[21/200]  train mse 1.0607 | mse val 1.0514
+     additional metrics:  [21/200]  train 0.6809 | val 0.6653
+
+[22/200]  train mse 1.0183 | mse val nan
+     additional metrics:  [22/200]  train 0.6642 | val nan
+
+[23/200]  train mse 1.0096 | mse val nan
+     additional metrics:  [23/200]  train 0.6632 | val nan
+
+
+it came back 
+
+
+[23/200]  train mse 1.0096 | mse val nan
+     additional metrics:  [23/200]  train 0.6632 | val nan
+
+[24/200]  train mse 0.9812 | mse val 1.1400
+     additional metrics:  [24/200]  train 0.6530 | val 0.7082
+
+[25/200]  train mse 0.9234 | mse val 1.0119
+     additional metrics:  [25/200]  train 0.6328 | val 0.6593
+
+
+attn off
+
+Module NHRZIBenv loaded.
+Module sw.a100 loaded.
+Module slurm (current version 24.11.5) loaded.
+bgn1006:~ $ module load anaconda3
+Module for Anaconda 2023.09 (Python 3.9.20) loaded.
+bgn1006:~ $ conda activate jessi
+(jessi) bgn1006:~ $ export CUBLAS_WORKSPACE_CONFIG=:4096:8
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023857
+params: 8079
+[1/200]  train mse 3.2414 | mse val 3.2508
+     additional metrics:  [1/200]  train 1.1919 | val 1.1925
+
+[2/200]  train mse 3.2296 | mse val nan
+     additional metrics:  [2/200]  train 1.1912 | val nan
+
+[3/200]  train mse nan | mse val 3.2519
+     additional metrics:  [3/200]  train nan | val 1.1890
+
+[4/200]  train mse 3.2345 | mse val 3.2515
+     additional metrics:  [4/200]  train 1.1911 | val 1.1872
+
+[5/200]  train mse nan | mse val 3.2544
+     additional metrics:  [5/200]  train nan | val 1.1938
+
+[6/200]  train mse 3.2340 | mse val 3.2528
+     additional metrics:  [6/200]  train 1.1908 | val 1.1909
+
+[7/200]  train mse nan | mse val nan
+     additional metrics:  [7/200]  train nan | val nan
+
+[8/200]  train mse nan | mse val nan
+     additional metrics:  [8/200]  train nan | val nan
+
+[9/200]  train mse nan | mse val nan
+     additional metrics:  [9/200]  train nan | val nan
+
+[10/200]  train mse nan | mse val nan
+     additional metrics:  [10/200]  train nan | val nan
+
+[11/200]  train mse nan | mse val nan
+     additional metrics:  [11/200]  train nan | val nan
+
+[12/200]  train mse nan | mse val nan
+     additional metrics:  [12/200]  train nan | val nan
+
+[13/200]  train mse nan | mse val nan
+     additional metrics:  [13/200]  train nan | val nan
+
+[14/200]  train mse nan | mse val nan
+     additional metrics:  [14/200]  train nan | val nan
+
+[15/200]  train mse nan | mse val nan
+     additional metrics:  [15/200]  train nan | val nan
+
+[16/200]  train mse nan | mse val nan
+     additional metrics:  [16/200]  train nan | val nan
+
+[17/200]  train mse nan | mse val nan
+     additional metrics:  [17/200]  train nan | val nan
+
+[18/200]  train mse nan | mse val nan
+     additional metrics:  [18/200]  train nan | val nan
+
+[19/200]  train mse nan | mse val nan
+     additional metrics:  [19/200]  train nan | val nan
+
+[20/200]  train mse nan | mse val nan
+     additional metrics:  [20/200]  train nan | val nan
+
+[21/200]  train mse nan | mse val nan
+     additional metrics:  [21/200]  train nan | val nan
+
+[22/200]  train mse nan | mse val nan
+     additional metrics:  [22/200]  train nan | val nan
+
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 212, in <module>
+    va=run(cfg,va_loader,False)
+  File "/home/becjessi/nhr_modular.py", line 189, in run
+    for z,x,y,m,*_ in loader:
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 677, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/becjessi/nhr_modular.py", line 173, in <lambda>
+    coll=lambda b: pad(b,cfg.hood_k,cfg.device,cfg.analysis_mode)
+  File "/home/becjessi/nhr_modular.py", line 62, in pad
+    s=z.shape[0]; zt[b,:s]=z; pt[b,:s]=p; yt[b,:s]=y; mt[b,:s]=True
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ 

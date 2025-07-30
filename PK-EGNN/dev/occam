@@ -1,0 +1,55 @@
+nolin
+
+Whole model          : 37,102
+{'runid': '20250725_201527_norbfnolin_1e-16', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 749, 300), 'epochs': 1000, 'dim': 12, 'depth': 4, 'basis': 8, 'hidden_dim': 4, 'num_heads': 20, 'dropout': [0.04, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 37102}
+Epoch   0 | train L1 = 0.8495
+              |  val L1 = 0.9136
+Epoch   1 | train L1 = 0.6646
+              |  val L1 = 0.9089
+Epoch   2 | train L1 = 0.6038
+              |  val L1 = 0.8446
+Epoch   3 | train L1 = 0.5789
+              |  val L1 = 0.8073
+Epoch   4 | train L1 = 0.5510
+              |  val L1 = 0.8251
+Epoch   5 | train L1 = 0.5334
+              |  val L1 = 0.8126
+Epoch   6 | train L1 = 0.5278
+              |  val L1 = 0.8084
+Epoch   7 | train L1 = 0.5151
+              |  val L1 = 0.7864
+Epoch   8 | train L1 = 0.5066
+              |  val L1 = 0.7635
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr998_norbf_nolin.py", line 452, in <module>
+    tr_losses.append(loss.item())
+KeyboardInterrupt
+
+(jessi) bgn1005:~ $ 
+
+
+vs lin (this run not reproducible)
+Whole model          : 37,104
+{'runid': '20250725_190603fixedseedfixedrbf', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 749, 300), 'epochs': 1000, 'dim': 12, 'depth': 4, 'basis': 8, 'hidden_dim': 4, 'num_heads': 20, 'dropout': [0.04, 0.03], 'rbf cutoff': 20.0, 'loss': L1Loss(), 'params': 37104}
+Epoch   0 | train L1 = 0.8214
+              |  val L1 = 0.6538
+Epoch   1 | train L1 = 0.6689
+              |  val L1 = 0.6587
+Epoch   2 | train L1 = 0.6187
+              |  val L1 = 0.5826
+Epoch   3 | train L1 = 0.5852
+              |  val L1 = 0.5506
+Epoch   4 | train L1 = 0.5692
+              |  val L1 = 0.5631
+Epoch   5 | train L1 = 0.5915
+              |  val L1 = 0.5602
+Epoch   6 | train L1 = 0.5433
+              |  val L1 = 0.5097
+Epoch   7 | train L1 = 0.5301
+              |  val L1 = 0.5240
+Epoch   8 | train L1 = 0.5136
+              |  val L1 = 0.5436
+Epoch   9 | train L1 = 0.5267
+              |  val L1 = 0.5077
+Epoch  10 | train L1 = 0.5064
+              |  val L1 = 0.4865

@@ -1,0 +1,105 @@
+Whole model          : 37,106
+{'runid': '20250725_214851fixedseedfixedrbf', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 749, 300), 'epochs': 1000, 'dim': 12, 'depth': 4, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.04, 0.03], 'loss': L1Loss(), 'params': 37106}
+Epoch   0 | train L1 = 0.8543
+              |  val L1 = 0.7192
+Epoch   1 | train L1 = 0.6694
+              |  val L1 = 0.6256
+Epoch   2 | train L1 = 0.6190
+              |  val L1 = 0.5963
+Epoch   3 | train L1 = 0.6016
+              |  val L1 = 0.5696
+Epoch   4 | train L1 = 0.5869
+              |  val L1 = 0.5736
+Epoch   5 | train L1 = 0.5715
+              |  val L1 = 0.5530
+Epoch   6 | train L1 = 0.5523
+              |  val L1 = 0.5431
+Epoch   7 | train L1 = 0.5480
+              |  val L1 = 0.5542
+Epoch   8 | train L1 = 0.5348
+              |  val L1 = 0.5186
+Epoch   9 | train L1 = 0.5306
+              |  val L1 = 0.5253
+Epoch  10 | train L1 = 0.5293
+              |  val L1 = 0.4995
+Epoch  11 | train L1 = 0.5198
+              |  val L1 = 0.5191
+Epoch  12 | train L1 = 0.9134
+              |  val L1 = 1.1683
+Epoch  13 | train L1 = 1.1862
+              |  val L1 = 1.1679
+
+predhead2=lin
+
+
+two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+(jessi) bgn1005:~ $ export CUBLAS_WORKSPACE_CONFIG=:4096:8
+(jessi) bgn1005:~ $ python nhrhead.py 
+inputs dir: 1000inputs/*.npz
+Whole model          : 37,111
+{'runid': '20250725_205903fixedseedfixedrbf', 'num_nbrs': 100, 'num_nbrs_egnn': 11, 'learning_rate': [0.005], 'dataset': ('1000inputs/*.npz', 749, 300), 'epochs': 1000, 'dim': 12, 'depth': 4, 'hidden_dim': 4, 'num_heads': 12, 'dropout': [0.04, 0.03], 'loss': L1Loss(), 'params': 37111}
+Epoch   0 | train L1 = 1.1870
+              |  val L1 = 1.1690
+Epoch   1 | train L1 = 1.1856
+              |  val L1 = 1.1682
+Epoch   2 | train L1 = 1.1856
+              |  val L1 = 1.1685
+Epoch   3 | train L1 = 1.1854
+              |  val L1 = 1.1682
+Epoch   4 | train L1 = 1.1855
+              |  val L1 = 1.1678
+Epoch   5 | train L1 = 1.1854
+              |  val L1 = 1.1678
+Epoch   6 | train L1 = 1.1855
+              |  val L1 = 1.1680
+Epoch   7 | train L1 = 1.1855
+              |  val L1 = 1.1680
+Epoch   8 | train L1 = 1.1854
+              |  val L1 = 1.1681
+Epoch   9 | train L1 = 1.1855
+              |  val L1 = 1.1684
+Epoch  10 | train L1 = 1.1854
+              |  val L1 = 1.1685
+Epoch  11 | train L1 = 1.1853
+              |  val L1 = 1.1682
+Epoch  12 | train L1 = 1.1854
+              |  val L1 = 1.1679
+Epoch  13 | train L1 = 1.1853
+              |  val L1 = 1.1680
+Epoch  14 | train L1 = 1.1854
+              |  val L1 = 1.1678
+Epoch  15 | train L1 = 1.1854
+              |  val L1 = 1.1685
+Epoch  16 | train L1 = 1.1853
+              |  val L1 = 1.1684
+Epoch  17 | train L1 = 1.1854
+              |  val L1 = 1.1678
+Epoch  18 | train L1 = 1.1853
+              |  val L1 = 1.1686
+Epoch  19 | train L1 = 1.1854
+              |  val L1 = 1.1682
+Epoch  20 | train L1 = 1.1854
+              |  val L1 = 1.1678
+Epoch  21 | train L1 = 1.1853
+              |  val L1 = 1.1685
+Epoch  22 | train L1 = 1.1854
+              |  val L1 = 1.1679
+Epoch  23 | train L1 = 1.1853
+              |  val L1 = 1.1687
+Epoch  24 | train L1 = 1.1853
+              |  val L1 = 1.1689
+Epoch  25 | train L1 = 1.1854
+              |  val L1 = 1.1680
+Epoch  26 | train L1 = 1.1853
+              |  val L1 = 1.1678
+Epoch  27 | train L1 = 1.1854
+              |  val L1 = 1.1678
+Epoch  28 | train L1 = 1.1852
+              |  val L1 = 1.1681
+Epoch  29 | train L1 = 1.1854
+              |  val L1 = 1.1679
+Epoch  30 | train L1 = 1.1855
+              |  val L1 = 1.1681
+
+
+predhead2=head(1,1

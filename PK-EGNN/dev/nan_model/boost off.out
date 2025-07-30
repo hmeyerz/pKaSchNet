@@ -1,0 +1,807 @@
+boost off 
+
+jrhoernschemeyer@localhost:~> ssh becjessi@blogin.nhr.zib.de
+Last login: Sat Jul 26 23:40:08 2025 from 62.144.41.98
+
+********************************************************************************
+*                                                                              *
+*               Welcome to NHR@ZIB system "Lise" on node blogin4               *
+*               (Rocky Linux 9.5, Environment Modules 5.4.0)                   *
+*                                                                              *
+*  Manual   ->  https://user.nhr.zib.de                                        *
+*  Support  ->  mailto:support@nhr.zib.de                                      *
+*                                                                              *
+********************************************************************************
+
+Module NHRZIBenv loaded.
+Module sw.clx.el9 loaded.
+Module slurm (current version 24.11.5) loaded.
+blogin4:~ $ ssh bgn1006
+Last login: Sun Jul 27 02:25:00 2025 from blogin4.usr.hlrn.de
+
+********************************************************************************
+*                                                                              *
+*               Welcome to NHR@ZIB system "Lise" on node bgn1006               *
+*               (Rocky Linux 8.10, Environment Modules 5.4.0)                  *
+*                                                                              *
+*  Manual   ->  https://user.nhr.zib.de                                        *
+*  Support  ->  mailto:support@nhr.zib.de                                      *
+*                                                                              *
+********************************************************************************
+
+Module NHRZIBenv loaded.
+Module sw.a100 loaded.
+Module slurm (current version 24.11.5) loaded.
+bgn1006:~ $ export CUBLAS_WORKSPACE_CONFIG=:4096:8
+bgn1006:~ $ module load anaconda3
+Module for Anaconda 2023.09 (Python 3.9.20) loaded.
+bgn1006:~ $ conda activate jessi
+(jessi) bgn1006:~ $ export CUBLAS_WORKSPACE_CONFIG=:4096:8
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_023721
+params: 8077
+[1/200]  train mse 3.2434 | mse val 3.2671
+     additional metrics:  [1/200]  train 1.1971 | val 1.2079
+
+[2/200]  train mse 3.2371 | mse val 3.2556
+     additional metrics:  [2/200]  train 1.1941 | val 1.1955
+
+[3/200]  train mse 3.2344 | mse val 3.2537
+     additional metrics:  [3/200]  train 1.1909 | val 1.1927
+
+[4/200]  train mse 3.2339 | mse val 3.2515
+     additional metrics:  [4/200]  train 1.1908 | val 1.1874
+
+[5/200]  train mse 3.2340 | mse val 3.2514
+     additional metrics:  [5/200]  train 1.1906 | val 1.1870
+
+[6/200]  train mse 3.2347 | mse val 3.2513
+     additional metrics:  [6/200]  train 1.1906 | val 1.1868
+
+[7/200]  train mse 3.2343 | mse val 3.2513
+     additional metrics:  [7/200]  train 1.1912 | val 1.1854
+
+[8/200]  train mse 3.2341 | mse val 3.2513
+     additional metrics:  [8/200]  train 1.1906 | val 1.1850
+
+[9/200]  train mse 3.2337 | mse val 3.2525
+     additional metrics:  [9/200]  train 1.1889 | val 1.1905
+
+[10/200]  train mse 3.2338 | mse val 3.2520
+     additional metrics:  [10/200]  train 1.1905 | val 1.1892
+
+[11/200]  train mse 3.2336 | mse val 3.2566
+     additional metrics:  [11/200]  train 1.1897 | val 1.1968
+
+[12/200]  train mse 3.2339 | mse val 3.2518
+     additional metrics:  [12/200]  train 1.1907 | val 1.1887
+
+[13/200]  train mse 3.2335 | mse val 3.2515
+     additional metrics:  [13/200]  train 1.1906 | val 1.1876
+
+[14/200]  train mse 3.2335 | mse val 3.2516
+     additional metrics:  [14/200]  train 1.1902 | val 1.1880
+
+[15/200]  train mse 3.2336 | mse val 3.2516
+     additional metrics:  [15/200]  train 1.1899 | val 1.1882
+
+[16/200]  train mse 3.2336 | mse val 3.2517
+     additional metrics:  [16/200]  train 1.1901 | val 1.1884
+
+[17/200]  train mse 3.2334 | mse val 3.2516
+     additional metrics:  [17/200]  train 1.1905 | val 1.1882
+
+[18/200]  train mse 3.2333 | mse val 3.2521
+     additional metrics:  [18/200]  train 1.1890 | val 1.1896
+
+[19/200]  train mse 3.2334 | mse val 3.2520
+     additional metrics:  [19/200]  train 1.1899 | val 1.1894
+
+[20/200]  train mse 3.2334 | mse val 3.2521
+     additional metrics:  [20/200]  train 1.1907 | val 1.1894
+
+[21/200]  train mse 3.2333 | mse val 3.2521
+     additional metrics:  [21/200]  train 1.1901 | val 1.1895
+
+[22/200]  train mse 3.2333 | mse val 3.2520
+     additional metrics:  [22/200]  train 1.1905 | val 1.1894
+
+[23/200]  train mse 3.2333 | mse val 3.2520
+     additional metrics:  [23/200]  train 1.1902 | val 1.1894
+
+[24/200]  train mse 3.2333 | mse val 3.2519
+     additional metrics:  [24/200]  train 1.1902 | val 1.1891
+
+[25/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [25/200]  train 1.1904 | val 1.1890
+
+[26/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [26/200]  train 1.1903 | val 1.1891
+
+[27/200]  train mse 3.2333 | mse val 3.2519
+     additional metrics:  [27/200]  train 1.1898 | val 1.1891
+
+[28/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [28/200]  train 1.1900 | val 1.1890
+
+[29/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [29/200]  train 1.1903 | val 1.1891
+
+[30/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [30/200]  train 1.1901 | val 1.1891
+
+[31/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [31/200]  train 1.1901 | val 1.1890
+
+[32/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [32/200]  train 1.1902 | val 1.1890
+
+[33/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [33/200]  train 1.1902 | val 1.1890
+
+[34/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [34/200]  train 1.1902 | val 1.1890
+
+[35/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [35/200]  train 1.1901 | val 1.1890
+
+[36/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [36/200]  train 1.1901 | val 1.1890
+
+[37/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [37/200]  train 1.1901 | val 1.1890
+
+[38/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [38/200]  train 1.1901 | val 1.1890
+
+[39/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [39/200]  train 1.1901 | val 1.1890
+
+[40/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [40/200]  train 1.1901 | val 1.1890
+
+[41/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [41/200]  train 1.1901 | val 1.1890
+
+[42/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [42/200]  train 1.1901 | val 1.1890
+
+[43/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [43/200]  train 1.1901 | val 1.1890
+
+[44/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [44/200]  train 1.1901 | val 1.1890
+
+[45/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [45/200]  train 1.1901 | val 1.1890
+
+[46/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [46/200]  train 1.1901 | val 1.1890
+
+[47/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [47/200]  train 1.1901 | val 1.1890
+
+[48/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [48/200]  train 1.1901 | val 1.1890
+
+[49/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [49/200]  train 1.1901 | val 1.1890
+
+[50/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [50/200]  train 1.1901 | val 1.1890
+
+[51/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [51/200]  train 1.1901 | val 1.1890
+
+[52/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [52/200]  train 1.1901 | val 1.1890
+
+[53/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [53/200]  train 1.1901 | val 1.1890
+
+[54/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [54/200]  train 1.1901 | val 1.1890
+
+[55/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [55/200]  train 1.1901 | val 1.1890
+
+[56/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [56/200]  train 1.1901 | val 1.1890
+
+[57/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [57/200]  train 1.1901 | val 1.1890
+
+[58/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [58/200]  train 1.1901 | val 1.1890
+
+[59/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [59/200]  train 1.1901 | val 1.1890
+
+[60/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [60/200]  train 1.1901 | val 1.1890
+
+[61/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [61/200]  train 1.1901 | val 1.1890
+
+[62/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [62/200]  train 1.1901 | val 1.1890
+
+[63/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [63/200]  train 1.1901 | val 1.1890
+
+[64/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [64/200]  train 1.1901 | val 1.1890
+
+[65/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [65/200]  train 1.1901 | val 1.1890
+
+[66/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [66/200]  train 1.1901 | val 1.1890
+
+[67/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [67/200]  train 1.1901 | val 1.1890
+
+[68/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [68/200]  train 1.1901 | val 1.1890
+
+[69/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [69/200]  train 1.1901 | val 1.1890
+
+[70/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [70/200]  train 1.1901 | val 1.1890
+
+[71/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [71/200]  train 1.1901 | val 1.1890
+
+[72/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [72/200]  train 1.1901 | val 1.1890
+
+[73/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [73/200]  train 1.1901 | val 1.1890
+
+[74/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [74/200]  train 1.1901 | val 1.1890
+
+[75/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [75/200]  train 1.1901 | val 1.1890
+
+[76/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [76/200]  train 1.1901 | val 1.1890
+
+[77/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [77/200]  train 1.1901 | val 1.1890
+
+[78/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [78/200]  train 1.1901 | val 1.1890
+
+[79/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [79/200]  train 1.1901 | val 1.1890
+
+[80/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [80/200]  train 1.1901 | val 1.1890
+
+[81/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [81/200]  train 1.1901 | val 1.1890
+
+[82/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [82/200]  train 1.1901 | val 1.1890
+
+[83/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [83/200]  train 1.1901 | val 1.1890
+
+[84/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [84/200]  train 1.1901 | val 1.1890
+
+[85/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [85/200]  train 1.1901 | val 1.1890
+
+[86/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [86/200]  train 1.1901 | val 1.1890
+
+[87/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [87/200]  train 1.1901 | val 1.1890
+
+[88/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [88/200]  train 1.1901 | val 1.1890
+
+[89/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [89/200]  train 1.1901 | val 1.1890
+
+[90/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [90/200]  train 1.1901 | val 1.1890
+
+[91/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [91/200]  train 1.1901 | val 1.1890
+
+[92/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [92/200]  train 1.1901 | val 1.1890
+
+[93/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [93/200]  train 1.1901 | val 1.1890
+
+[94/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [94/200]  train 1.1901 | val 1.1890
+
+[95/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [95/200]  train 1.1901 | val 1.1890
+
+[96/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [96/200]  train 1.1901 | val 1.1890
+
+[97/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [97/200]  train 1.1901 | val 1.1890
+
+[98/200]  train mse 3.2332 | mse val 3.2519
+     additional metrics:  [98/200]  train 1.1901 | val 1.1890
+
+^CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 211, in <module>
+    tr=run(cfg,tr_loader,True)
+  File "/home/becjessi/nhr_modular.py", line 193, in run
+    pred=model(z,x).flatten(); loss=p_fn(pred,y)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/nhr_modular.py", line 101, in forward
+    h,coord=self.egnn(z,x); h=h[0]                # (R,N,dim)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 52, in forward
+    h_list, coords = block(z, x)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/architecture.py", line 34, in forward
+    h2 = self.ffn(h)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/becjessi/.conda/envs/jessi/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ 
+
+with prot
+
+in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_030548
+params: 9405
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+[2/200]  train mse nan | mse val nan
+     additional metrics:  [2/200]  train nan | val nan
+
+[3/200]  train mse nan | mse val nan
+     additional metrics:  [3/200]  train nan | val nan
+
+without conv
+CTraceback (most recent call last):
+  File "/home/becjessi/nhr_modular.py", line 212, in <module>
+    va=run(cfg,va_loader,False)
+  File "/home/becjessi/nhr_modular.py", line 191, in run
+    x=x.view(-1,x.size(2),3)[v].to(cfg.device); y=y.view(-1)[v].to(cfg.device)
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_030803
+params: 9397
+[1/200]  train mse nan | mse val 1.4663
+     additional metrics:  [1/200]  train nan | val 0.7997
+
+[2/200]  train mse nan | mse val 1.1830
+     additional metrics:  [2/200]  train nan | val 0.7327
+
+[3/200]  train mse nan | mse val 1.1746
+     additiona
+
+only rbf and attn
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_031053
+params: 8069
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+[2/200]  train mse nan | mse val nan
+     additional metrics:  [2/200]  train nan | val nan
+
+[3/200]  train mse nan | mse val nan
+     additional metrics:  [3/200]  train nan | val nan
+
+rbf attn and boost
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_031250
+params: 8069
+[1/200]  train mse nan | mse val nan
+     additional metrics:  [1/200]  train nan | val nan
+
+
+
+from temrinal, no rbf and the rest of the no prot iterations of first round
+ pass
+KeyboardInterrupt
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_024437
+params: 8079
+[1/200]  train mse 3.2417 | mse val 3.2540
+     additional metrics:  [1/200]  train 1.1907 | val 1.1932
+
+[2/200]  train mse 3.2350 | mse val 3.2522
+     additional metrics:  [2/200]  train 1.1916 | val 1.1897
+
+[3/200]  train mse 3.2355 | mse val 3.2516
+     additional metrics:  [3/200]  train 1.1905 | val 1.1881
+
+[4/200]  train mse 3.2346 | mse val 3.2515
+     additional metrics:  [4/200]  train 1.1910 | val 1.1844
+
+[5/200]  train mse 3.2349 | mse val 3.2560
+     additional metrics:  [5/200]  train 1.1899 | val 1.1960
+
+[6/200]  train mse 3.2349 | mse val 3.2529
+     additional metrics:  [6/200]  train 1.1909 | val 1.1911
+
+[7/200]  train mse 3.2346 | mse val 3.2548
+     additional metrics:  [7/200]  train 1.1908 | val 1.1943
+
+[8/200]  train mse 3.2338 | mse val 3.2536
+     additional metrics:  [8/200]  train 1.1910 | val 1.1923
+
+[9/200]  train mse 3.2341 | mse val 3.2522
+     additional metrics:  [9/200]  train 1.1907 | val 1.1898
+
+[10/200]  train mse 3.2336 | mse val 3.2513
+     additional metrics:  [10/200]  train 1.1909 | val 1.1861
+
+[11/200]  train mse 3.2342 | mse val 3.2514
+     additional metrics:  [11/200]  train 1.1899 | val 1.1874
+
+[12/200]  train mse 2.3120 | mse val 1.7945
+     additional metrics:  [12/200]  train 1.0407 | val 0.9446
+
+[13/200]  train mse 1.5504 | mse val 1.5760
+     additional metrics:  [13/200]  train 0.8577 | val 0.7954
+
+[14/200]  train mse 1.2073 | mse val 1.1708
+     additional metrics:  [14/200]  train 0.7337 | val 0.7106
+
+[15/200]  train mse 1.1011 | mse val 1.1254
+     additional metrics:  [15/200]  train 0.6992 | val 0.7048
+
+[16/200]  train mse 1.0292 | mse val 1.0323
+     additional metrics:  [16/200]  train 0.6774 | val 0.6621
+
+[17/200]  train mse 1.0241 | mse val 1.0657
+     additional metrics:  [17/200]  train 0.6764 | val 0.6861
+
+[18/200]  train mse 0.9846 | mse val 0.9706
+     additional metrics:  [18/200]  train 0.6602 | val 0.6473
+
+[19/200]  train mse 0.9695 | mse val 0.9924
+     additional metrics:  [19/200]  train 0.6540 | val 0.6547
+
+[20/200]  train mse 0.9542 | mse val 0.9820
+     additional metrics:  [20/200]  train 0.6456 | val 0.6563
+
+[21/200]  train mse 0.9274 | mse val 0.9440
+     additional metrics:  [21/200]  train 0.6358 | val 0.6325
+
+[22/200]  train mse 0.9059 | mse val 0.8657
+     additional metrics:  [22/200]  train 0.6283 | val 0.5942
+
+[23/200]  train mse 0.9101 | mse val 0.9306
+     additional metrics:  [23/200]  train 0.6309 | val 0.6184
+
+[24/200]  train mse 0.8925 | mse val 0.8767
+     additional metrics:  [24/200]  train 0.6186 | val 0.6015
+
+[25/200]  train mse 0.8656 | mse val 0.8508
+     additional metrics:  [25/200]  train 0.6095 | val 0.5939
+
+[26/200]  train mse 0.8705 | mse val 0.8577
+     additional metrics:  [26/200]  train 0.6132 | val 0.6022
+
+[27/200]  train mse 0.8543 | mse val 0.8770
+     additional metrics:  [27/200]  train 0.6063 | val 0.5941
+
+[28/200]  train mse 0.8414 | mse val 0.8258
+     additional metrics:  [28/200]  train 0.6008 | val 0.5769
+
+[29/200]  train mse 0.8275 | mse val 0.8316
+     additional metrics:  [29/200]  train 0.5962 | val 0.5798
+
+[30/200]  train mse 0.8111 | mse val 0.8278
+     additional metrics:  [30/200]  train 0.5881 | val 0.5721
+
+[31/200]  train mse 0.8234 | mse val 0.8042
+     additional metrics:  [31/200]  train 0.5906 | val 0.5683
+
+[32/200]  train mse 0.8025 | mse val 0.8527
+     additional metrics:  [32/200]  train 0.5853 | val 0.5964
+
+[33/200]  train mse 0.7862 | mse val 0.7920
+     additional metrics:  [33/200]  train 0.5763 | val 0.5668
+
+[34/200]  train mse 0.7789 | mse val 0.7918
+     additional metrics:  [34/200]  train 0.5741 | val 0.5674
+
+[35/200]  train mse 0.7737 | mse val 0.7900
+     additional metrics:  [35/200]  train 0.5723 | val 0.5618
+
+[36/200]  train mse 0.7655 | mse val 0.7846
+     additional metrics:  [36/200]  train 0.5705 | val 0.5619
+
+[37/200]  train mse 0.7549 | mse val 0.7551
+     additional metrics:  [37/200]  train 0.5633 | val 0.5397
+
+[38/200]  train mse 0.7503 | mse val 0.7923
+     additional metrics:  [38/200]  train 0.5652 | val 0.5731
+
+[39/200]  train mse 0.7495 | mse val 0.7837
+     additional metrics:  [39/200]  train 0.5643 | val 0.5638
+
+[40/200]  train mse 0.7402 | mse val 0.7297
+     additional metrics:  [40/200]  train 0.5601 | val 0.5367
+
+[41/200]  train mse 0.7324 | mse val 0.7442
+     additional metrics:  [41/200]  train 0.5561 | val 0.5355
+
+[42/200]  train mse 0.7341 | mse val 0.7234
+     additional metrics:  [42/200]  train 0.5585 | val 0.5374
+
+[43/200]  train mse 0.7270 | mse val 0.7831
+     additional metrics:  [43/200]  train 0.5512 | val 0.5940
+
+[44/200]  train mse 0.7337 | mse val 0.8032
+     additional metrics:  [44/200]  train 0.5574 | val 0.5587
+
+[45/200]  train mse 0.7221 | mse val 0.7430
+     additional metrics:  [45/200]  train 0.5540 | val 0.5526
+
+[46/200]  train mse 0.7146 | mse val 0.7177
+     additional metrics:  [46/200]  train 0.5487 | val 0.5264
+
+[47/200]  train mse 0.7173 | mse val 0.7422
+     additional metrics:  [47/200]  train 0.5506 | val 0.5335
+
+[48/200]  train mse 0.7222 | mse val 0.7745
+     additional metrics:  [48/200]  train 0.5504 | val 0.5657
+
+[49/200]  train mse 0.7132 | mse val 0.7653
+     additional metrics:  [49/200]  train 0.5477 | val 0.5536
+
+[50/200]  train mse 0.7058 | mse val 0.6953
+     additional metrics:  [50/200]  train 0.5441 | val 0.5188
+
+[51/200]  train mse 0.7014 | mse val 0.8397
+     additional metrics:  [51/200]  train 0.5478 | val 0.5718
+
+[52/200]  train mse 0.7000 | mse val 0.7209
+     additional metrics:  [52/200]  train 0.5421 | val 0.5211
+
+[53/200]  train mse 0.6967 | mse val 0.7221
+     additional metrics:  [53/200]  train 0.5427 | val 0.5299
+
+[54/200]  train mse 0.7023 | mse val 0.7610
+     additional metrics:  [54/200]  train 0.5439 | val 0.5535
+
+[55/200]  train mse 0.6566 | mse val 0.7009
+     additional metrics:  [55/200]  train 0.5235 | val 0.5225
+
+[56/200]  train mse 0.6553 | mse val 0.6833
+     additional metrics:  [56/200]  train 0.5240 | val 0.5169
+
+[57/200]  train mse 0.6500 | mse val 0.6843
+     additional metrics:  [57/200]  train 0.5212 | val 0.5184
+
+[58/200]  train mse 0.6516 | mse val 0.6882
+     additional metrics:  [58/200]  train 0.5222 | val 0.5273
+
+[59/200]  train mse 0.6477 | mse val 0.6847
+     additional metrics:  [59/200]  train 0.5204 | val 0.5189
+
+[60/200]  train mse 0.6447 | mse val 0.7099
+     additional metrics:  [60/200]  train 0.5194 | val 0.5246
+
+[61/200]  train mse 0.6167 | mse val 0.6644
+     additional metrics:  [61/200]  train 0.5055 | val 0.5086
+
+[62/200]  train mse 0.6230 | mse val 0.6705
+     additional metrics:  [62/200]  train 0.5094 | val 0.5105
+
+[63/200]  train mse 0.6182 | mse val 0.6602
+     additional metrics:  [63/200]  train 0.5074 | val 0.5046
+
+[64/200]  train mse 0.6179 | mse val 0.6623
+     additional metrics:  [64/200]  train 0.5070 | val 0.5084
+
+[65/200]  train mse 0.6137 | mse val 0.6648
+     additional metrics:  [65/200]  train 0.5057 | val 0.5126
+
+[66/200]  train mse 0.6116 | mse val 0.6745
+     additional metrics:  [66/200]  train 0.5058 | val 0.5107
+
+[67/200]  train mse 0.6086 | mse val 0.7569
+     additional metrics:  [67/200]  train 0.5036 | val 0.5515
+
+[68/200]  train mse 0.5962 | mse val 0.6922
+     additional metrics:  [68/200]  train 0.4984 | val 0.5184
+
+[69/200]  train mse 0.5940 | mse val 0.7277
+     additional metrics:  [69/200]  train 0.4973 | val 0.5361
+
+[70/200]  train mse 0.5977 | mse val 0.6535
+     additional metrics:  [70/200]  train 0.5000 | val 0.5035
+
+[71/200]  train mse 0.5952 | mse val 0.6555
+     additional metrics:  [71/200]  train 0.4974 | val 0.5029
+
+[72/200]  train mse 0.5884 | mse val 0.6630
+     additional metrics:  [72/200]  train 0.4959 | val 0.5065
+
+[73/200]  train mse 0.5905 | mse val 0.6653
+     additional metrics:  [73/200]  train 0.4958 | val 0.5123
+
+[74/200]  train mse 0.5915 | mse val 0.6563
+     additional metrics:  [74/200]  train 0.4970 | val 0.5018
+
+[75/200]  train mse 0.5862 | mse val 0.6664
+     additional metrics:  [75/200]  train 0.4932 | val 0.5099
+
+[76/200]  train mse 0.5858 | mse val 0.6554
+     additional metrics:  [76/200]  train 0.4936 | val 0.5029
+
+[77/200]  train mse 0.5849 | mse val 0.6508
+     additional metrics:  [77/200]  train 0.4927 | val 0.5015
+
+[78/200]  train mse 0.5808 | mse val 0.6506
+     additional metrics:  [78/200]  train 0.4915 | val 0.5016
+
+[79/200]  train mse 0.5815 | mse val 0.6500
+     additional metrics:  [79/200]  train 0.4928 | val 0.5012
+
+[80/200]  train mse 0.5787 | mse val 0.6704
+     additional metrics:  [80/200]  train 0.4918 | val 0.5094
+
+[81/200]  train mse 0.5822 | mse val 0.6628
+     additional metrics:  [81/200]  train 0.4935 | val 0.5060
+
+[82/200]  train mse 0.5882 | mse val 0.6663
+     additional metrics:  [82/200]  train 0.4946 | val 0.5081
+
+[83/200]  train mse 0.5797 | mse val 0.6586
+     additional metrics:  [83/200]  train 0.4919 | val 0.5047
+
+[84/200]  train mse 0.5769 | mse val 0.6527
+     additional metrics:  [84/200]  train 0.4917 | val 0.5012
+
+[85/200]  train mse 0.5779 | mse val 0.6540
+     additional metrics:  [85/200]  train 0.4908 | val 0.5027
+
+[86/200]  train mse 0.5785 | mse val 0.6575
+     additional metrics:  [86/200]  train 0.4911 | val 0.5044
+
+[87/200]  train mse 0.5768 | mse val 0.6573
+     additional metrics:  [87/200]  train 0.4902 | val 0.5044
+
+[88/200]  train mse 0.5780 | mse val 0.6568
+     additional metrics:  [88/200]  train 0.4898 | val 0.5035
+
+[89/200]  train mse 0.5738 | mse val 0.6550
+     additional metrics:  [89/200]  train 0.4895 | val 0.5030
+
+[90/200]  train mse 0.5777 | mse val 0.6521
+     additional metrics:  [90/200]  train 0.4904 | val 0.5016
+
+[91/200]  train mse 0.5741 | mse val 0.6585
+     additional metrics:  [91/200]  train 0.4896 | val 0.5048
+
+[92/200]  train mse 0.5735 | mse val 0.6567
+     additional metrics:  [92/200]  train 0.4904 | val 0.5038
+
+[93/200]  train mse 0.5719 | mse val 0.6558
+     additional metrics:  [93/200]  train 0.4881 | val 0.5035
+
+[94/200]  train mse 0.5739 | mse val 0.6513
+     additional metrics:  [94/200]  train 0.4885 | val 0.5016
+
+[95/200]  train mse 0.5729 | mse val 0.6549
+     additional metrics:  [95/200]  train 0.4885 | val 0.5031
+
+[96/200]  train mse 0.5718 | mse val 0.6556
+     additional metrics:  [96/200]  train 0.4886 | val 0.5035
+
+[97/200]  train mse 0.5750 | mse val 0.6521
+     additional metrics:  [97/200]  train 0.4894 | val 0.5020
+
+[98/200]  train mse 0.5693 | mse val 0.6548
+     additional metrics:  [98/200]  train 0.4875 | val 0.5031
+
+[99/200]  train mse 0.5729 | mse val 0.6554
+     additional metrics:  [99/200]  train 0.4889 | val 0.5034
+
+[100/200]  train mse 0.5696 | mse val 0.6537
+     additional metrics:  [100/200]  train 0.4881 | val 0.5026
+
+[101/200]  train mse 0.5697 | mse val 0.6551
+     additional metrics:  [101/200]  train 0.4878 | val 0.5032
+
+[102/200]  train mse 0.5741 | mse val 0.6540
+     additional metrics:  [102/200]  train 0.4886 | val 0.5026
+
+[103/200]  train mse 0.5685 | mse val 0.6532
+     additional metrics:  [103/200]  train 0.4878 | val 0.5023
+
+[104/200]  train mse 0.5713 | mse val 0.6537
+     additional metrics:  [104/200]  train 0.4871 | val 0.5025
+
+[105/200]  train mse 0.5655 | mse val 0.6538
+     additional metrics:  [105/200]  train 0.4865 | val 0.5026
+
+[106/200]  train mse 0.5689 | mse val 0.6542
+     additional metrics:  [106/200]  train 0.4880 | val 0.5028
+
+[107/200]  train mse 0.5727 | mse val 0.6541
+     additional metrics:  [107/200]  train 0.4893 | val 0.5027
+
+[108/200]  train mse 0.5738 | mse val 0.6540
+     additional metrics:  [108/200]  train 0.4892 | val 0.5027
+
+[109/200]  train mse 0.5710 | mse val 0.6540
+     additional metrics:  [109/200]  train 0.4881 | val 0.5027
+
+[110/200]  train mse 0.5697 | mse val 0.6540
+     additional metrics:  [110/200]  train 0.4884 | val 0.5027
+
+[111/200]  train mse 0.5693 | mse val 0.6538
+     additional metrics:  [111/200]  train 0.4879 | val 0.5026
+
+[112/200]  train mse 0.5711 | mse val 0.6540
+     additional metrics:  [112/200]  train 0.4888 | val 0.5027
+
+[113/200]  train mse 0.5726 | mse val 0.6541
+     additional metrics:  [113/200]  train 0.4892 | val 0.5027
+
+[114/200]  train mse 0.5736 | mse val 0.6541
+     additional metrics:  [114/200]  train 0.4890 | val 0.5027
+
+[115/200]  train mse 0.5724 | mse val 0.6542
+     additional metrics:  [115/200]  train 0.4875 | val 0.5027
+
+[116/200]  train mse 0.5710 | mse val 0.6542
+     additional metrics:  [116/200]  train 0.4879 | val 0.5027
+
+[117/200]  train mse 0.5726 | mse val 0.6541
+     additional metrics:  [117/200]  train 0.4886 | val 0.5027
+
+[118/200]  train mse 0.5711 | mse val 0.6541
+     additional metrics:  [118/200]  train 0.4883 | val 0.5027
+
+[119/200]  train mse 0.5714 | mse val 0.6542
+     additional metrics:  [119/200]  train 0.4884 | val 0.5027
+
+[120/200]  train mse 0.5704 | mse val 0.6542
+     additional metrics:  [120/200]  train 0.4875 | val 0.5028
+
+client_loop: send disconnect: Broken pipe
+jrhoernschemeyer@localhost:~> 
+
+all on but conv
+
+(jessi) bgn1006:~ $ python nhr_modular.py 
+Run‑ID: 20250727_031406
+params: 9399
+[1/200]  train mse nan | mse val 1.8937
+     additional metrics:  [1/200]  train nan | val 0.9504
+
+client_loop: send disconnect: Broken pipe
+jrhoernschemeyer@localhost:~> ssh becjessi@blogin.nhr.zib.de
