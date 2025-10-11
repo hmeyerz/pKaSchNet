@@ -3,3 +3,15 @@ This work is for my project: GNNs on pkPDB (ablated with attention). It aims to 
 Original Work of Jessi Rose Hoernschemeyer, myself and chatGPT authored the codes here except for the SchNet architecture or TorchMD_Net architectures, if they are still in the repo or when they were. 
 
 Do not reproduce, distribute, or publish final models that have been tuned on outputs from the software in this repo or specific architecture implementations here e.g. schedulers, or codes directly reproduced from methods designed here (ML pipelines: SchNetPack/ASE --> NPZ/PyTorch) without explicit usage rights from jrhoernschemeyer@gmail.com. 
+
+Aggregation Methods:
+
+SCHNET: Linear →Sum Aggregate
+
+EGNN: Linear →Optional Aggregate
+
+MACE: Linear →Sum Aggregate
+
+PKA = F(species, position, charge)
+
+For my project we remove partial charges and assume charges can be gotten from Z, thus pKa = F(charges(species,pos), pos) of local env
