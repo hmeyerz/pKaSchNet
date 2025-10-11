@@ -38,6 +38,28 @@ Build Model
 ● Choice of Radial Basis Function (+# of Gaussians)
 3.DefineOutput:MolecularProperty(pKavalue)
 
+April 2024
+
+Model 1 (schnet)
+Each cutout size depending on cutoff radius.
+cutout = every atom of the titratable residue +& neighboring
+residues (excluding H20 & those with digits)
+Data = Sql3lite database with an Atoms objects (= a cutout):
+Data Size : 40cutouts is 1800kb
+Cutout : Atoms(symbols=‘Every Atom of the Entire Cutout’,
+ positions=.....)
+Output: atomic energies
+Model 2
+Input: atomwise or residue-wise energies
+Anything else? %SASA (biopython?) Residue_depth
+(biopython)? Change coordinate system? B-factor?
+Output: PKA
+How did I get my data?
+● PDB name, Residue Number, Chain → generates cutout (MDA) from PDBs
+● It would take 38 days to generate the neighborhoods on my CPU
+?’s: Data reduction? How to efficiently write the data
+
+
 Dec 2024
 
 RCSB (PDBs without metals)
