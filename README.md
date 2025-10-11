@@ -1,1 +1,5 @@
 This work is for my project: GNNs on pkPDB (ablated with attention). This repo shows the development from the idea of using SchNet-based GNN implementations (SchNetPack, ASE), to the vanilla EGNN "pK-EGNN" using my NPZ dataset with metals/ligands on modeled RCSB data and pkPDB shifts with PKAD as val set. This work was to develop my master's thesis using CFCNNs to predict protein pKa values. It has been developed for 2.75 with the help of the TUBiomodeling and FUB (CC+team) and undergone many iterations and potential final implementations, until the best ones were found for production.
+
+Original Work of Jessi Rose Hoernschemeyer, myself and chatGPT authored the codes here except for the SchNet architecture or TorchMD_Net architectures, if they are still in the repo or when they were. 
+
+Do not reproduce, distribute, or publish final models that have been tuned on outputs from the software in this repo or specific architecture implementations here e.g. schedulers, or codes directly reproduced from methods designed here (ML pipelines: SchNetPack/ASE --> NPZ/PyTorch) without explicit usage rights from jrhoernschemeyer@gmail.com. 
