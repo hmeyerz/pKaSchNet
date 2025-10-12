@@ -86,6 +86,52 @@ MACE: Linear →Sum Aggregate
 
 PKA = F(species, position, charge)
 
+============================================================
+
+**+++++++++++++++++++++++++++++++++++++++++++++++++++++++**
+
+Project history: 
+
+**Plan Phase: 2023**
+
+Make 2 pka-regressors --> 
+make 1 deep learning regressor on pkPDB labels (no AlphaFold) and PKAD -->
+make 1 CNN on pkPDB+PKAD without metals -->
+
+*Planned Database: pkPDB+PKAD unmodeled proteins which don't have metals (~60K proteins), protonated and unprotonated*, every atom who is a member of a labeled site
+
+**Prebuild Phase: 2023-2024**
+
+Adapt SchNet via TorchMD-Net to pKa-prediction   Inputs = Z, R, rule-based partial charges and atom types.      Independent Rcuts with Hydrogens, all-atom    
+
+Adapt SchNet w/ pytorch geometric -> pK          Inputs = Z, R       pkPDB+PKAD                                 Independent Rcuts without Hydrogens, all-atom   
+
+Adapt SchNet energy outputs w/ SchNetPack -> pK  Inputs = Z, R       pkPDB+PKAD                                 Independent Rcuts without Hydrogens, all-atom    
+
+Transfer learning: pretrained SchNet E-> pK      Inputs = Z, R       pkPDB+PKAD                                 Independent Rcuts without Hydrogens, all-atom   
+
+*Database: pkPDB+PKAD protonated PDBs which don't have metals (~60K proteins)*, every atom who is a member of a labeled site
+
+**Plan to Product (2024-2025)**
+
+Adapt/Employ MACE, NequIP, or PAINN to pKa-prediction Inputs = Z, R, maybe q   pkPDB+PKAD                            Full protein without Hydrogens, all-atom        
+
+Wrap EGNN-Network for macro pKa-prediction       Inputs = Z, R            pkPDB                                 Independent Rcuts without Hydroges, all-atom     
+
+*Database: all pkPDB protonated PDBs, stripped (Z=6,7,8, or 16), dehydrated (full 121K)*, every atom who is a member of a labeled site
+
+1EGNN_Network, 1mha, + Linears --> pK-shift      Inputs = Z, R            pkPDB                                 Independent Rcuts, batch = protein, all-atom   
+
+*Database: all pkPDB protonated PDB solutes, dehydrated (121K pkPDB, no AlphaFold)*, every atom of a biological molecule, all-H
+
+GAT (EGNN/MHA/readout layer) --> pK-shift        Inputs = Z, R            pkPDB 121K                            Independent Kcuts, batch = protein, all-atom     
+
+
+
+Today:
+--> Hybrid architecture, multiresolution  -->    Inputs = Z, R                                                  Coupled Kcuts, batch = X proteins, all-atom      
+
+
 For my project we remove partial charges and assume charges can be gotten from Z, thus pKa = F(charges(species,pos), pos) of local env
 
 
