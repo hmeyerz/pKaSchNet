@@ -1,1 +1,1 @@
-All rights reserved JRH, do not reproduce. Credit FUB pypka pkai pkpdb EGNN_pytorch PyTorch (MHA) SchNet ChatGPT + every import. https://github.com/hmeyerz/piKa Compute credit: NHR/ZIB
+All rights reserved JRH, do not reproduce. Credit FUB pypka pkai pkpdb EGNN_pytorch PyTorch (MHA) SchNet PKAD NumPy + every import + ChatGPT + profs. https://github.com/hmeyerz/piKa Compute credit: NHR/ZIB
